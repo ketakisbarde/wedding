@@ -831,6 +831,12 @@ a:hover { color: var(--marigold); }
   .rsvp-form { padding: 28px 20px; }
 }
 
+/* Mobile performance: pause heavy SVG animations */
+@media (max-width: 768px) {
+  .slide:not(.active) * { animation-play-state: paused !important; }
+  .petals-container { display: none; }
+}
+
 /* ============================================
    FLOATING PETALS
    ============================================ */
@@ -1926,8 +1932,11 @@ a:hover { color: var(--marigold); }
 // ---- STARS with shimmer + glow + shooting stars ----
 (function() {
   const c = document.getElementById('stars');
+  const isMobile = window.innerWidth < 768;
+  const starCount = isMobile ? 35 : 120;
+  const shootCount = isMobile ? 1 : 3;
   // Regular stars with shimmer glow
-  for (let i = 0; i < 120; i++) {
+  for (let i = 0; i < starCount; i++) {
     const s = document.createElement('div');
     s.className = 'star' + (Math.random() > 0.7 ? ' bright' : '');
     s.style.left = Math.random() * 100 + '%';
@@ -1942,7 +1951,7 @@ a:hover { color: var(--marigold); }
     c.appendChild(s);
   }
   // Shooting stars
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < shootCount; i++) {
     const ss = document.createElement('div');
     ss.className = 'shooting-star';
     ss.style.left = (10 + Math.random() * 60) + '%';
@@ -2163,72 +2172,52 @@ document.querySelectorAll('.seattle-photos, .carmel-photos, .everythingship-phot
   }, 3000);
 });
 
-/* ---------- Floating Petals ---------- */
+/* ---------- Floating Petals (desktop only) ---------- */
 (function() {
+  // Skip petals entirely on mobile to prevent crashes
+  if (window.innerWidth < 768) return;
+
   const container = document.createElement('div');
   container.className = 'petals-container';
   container.setAttribute('aria-hidden', 'true');
   document.body.appendChild(container);
 
-  // Petal SVG shapes — small, soft, gold-toned
   const shapes = [
-    // Soft rounded petal
     '<svg viewBox="0 0 20 20"><ellipse cx="10" cy="12" rx="5" ry="8" fill="#C9A84C" opacity="0.5" transform="rotate(-15 10 12)"/></svg>',
-    // Tiny star sparkle
     '<svg viewBox="0 0 20 20"><path d="M10 2l1.5 5.5L17 9l-5.5 1.5L10 16l-1.5-5.5L3 9l5.5-1.5z" fill="#E8A317" opacity="0.45"/></svg>',
-    // Small circle dot
     '<svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="3" fill="#C9A84C" opacity="0.35"/></svg>',
-    // Thin leaf
     '<svg viewBox="0 0 20 20"><path d="M10 3 Q15 10 10 18 Q5 10 10 3Z" fill="#D4AF37" opacity="0.4"/></svg>'
   ];
 
-  const isMobile = window.innerWidth < 768;
-  const MAX_PETALS = isMobile ? 6 : 18;
+  const MAX_PETALS = 12;
   let activePetals = 0;
+  let paused = false;
+
+  document.addEventListener('visibilitychange', () => { paused = document.hidden; });
 
   function spawnPetal() {
     if (activePetals >= MAX_PETALS) return;
     activePetals++;
-
     const petal = document.createElement('div');
     petal.className = 'petal';
-    const size = 10 + Math.random() * 14; // 10-24px
-    const left = Math.random() * 100;
-    const duration = 8 + Math.random() * 7; // 8-15s fall
-    const swayDur = 2 + Math.random() * 3; // 2-5s sway
+    const size = 10 + Math.random() * 14;
+    const duration = 8 + Math.random() * 7;
     const delay = Math.random() * 2;
-
-    petal.style.cssText = `left:${left}%;width:${size}px;height:${size}px;animation-duration:${duration}s;animation-delay:${delay}s;`;
-
+    petal.style.cssText = `left:${Math.random()*100}%;width:${size}px;height:${size}px;animation-duration:${duration}s;animation-delay:${delay}s;`;
     const shape = document.createElement('div');
     shape.className = 'petal-shape';
-    shape.style.animationDuration = swayDur + 's';
+    shape.style.animationDuration = (2 + Math.random() * 3) + 's';
     shape.innerHTML = shapes[Math.floor(Math.random() * shapes.length)];
     petal.appendChild(shape);
     container.appendChild(petal);
-
-    setTimeout(() => {
-      petal.remove();
-      activePetals--;
-    }, (duration + delay) * 1000);
+    setTimeout(() => { petal.remove(); activePetals--; }, (duration + delay) * 1000);
   }
 
-  // Spawn petals at intervals
   function loop() {
-    spawnPetal();
-    setTimeout(loop, isMobile ? (1500 + Math.random() * 2000) : (600 + Math.random() * 1200));
+    if (!paused) spawnPetal();
+    setTimeout(loop, 800 + Math.random() * 1500);
   }
-
-  // Only run when page is visible
-  let running = true;
-  document.addEventListener('visibilitychange', () => {
-    running = !document.hidden;
-  });
-
-  // Start after a short delay
-  setTimeout(() => {
-    loop();
-  }, 1500);
+  setTimeout(loop, 2000);
 })();
 </script>
 </body>
