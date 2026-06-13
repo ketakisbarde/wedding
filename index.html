@@ -830,6 +830,50 @@ a:hover { color: var(--marigold); }
   .form-row-half { grid-template-columns: 1fr; }
   .rsvp-form { padding: 28px 20px; }
 }
+
+/* ============================================
+   FLOATING PETALS
+   ============================================ */
+.petals-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+.petal {
+  position: absolute;
+  top: -40px;
+  opacity: 0;
+  animation: petalFall linear forwards;
+}
+.petal-shape {
+  width: 100%;
+  height: 100%;
+  animation: petalSway ease-in-out infinite;
+}
+.petal-shape svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 2px rgba(201,168,76,0.3));
+}
+@keyframes petalFall {
+  0%   { opacity: 0; transform: translateY(0) rotate(0deg); }
+  10%  { opacity: 0.8; }
+  90%  { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(105vh) rotate(360deg); }
+}
+@keyframes petalSway {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25%  { transform: translateX(15px) rotate(10deg); }
+  75%  { transform: translateX(-15px) rotate(-10deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .petals-container { display: none; }
+}
 </style>
 </head>
 <body>
@@ -2118,6 +2162,73 @@ document.querySelectorAll('.seattle-photos, .carmel-photos, .everythingship-phot
     imgs[idx].classList.add('active');
   }, 3000);
 });
+
+/* ---------- Floating Petals ---------- */
+(function() {
+  const container = document.createElement('div');
+  container.className = 'petals-container';
+  container.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(container);
+
+  // Petal SVG shapes — small, soft, gold-toned
+  const shapes = [
+    // Soft rounded petal
+    '<svg viewBox="0 0 20 20"><ellipse cx="10" cy="12" rx="5" ry="8" fill="#C9A84C" opacity="0.5" transform="rotate(-15 10 12)"/></svg>',
+    // Tiny star sparkle
+    '<svg viewBox="0 0 20 20"><path d="M10 2l1.5 5.5L17 9l-5.5 1.5L10 16l-1.5-5.5L3 9l5.5-1.5z" fill="#E8A317" opacity="0.45"/></svg>',
+    // Small circle dot
+    '<svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="3" fill="#C9A84C" opacity="0.35"/></svg>',
+    // Thin leaf
+    '<svg viewBox="0 0 20 20"><path d="M10 3 Q15 10 10 18 Q5 10 10 3Z" fill="#D4AF37" opacity="0.4"/></svg>'
+  ];
+
+  const MAX_PETALS = 18;
+  let activePetals = 0;
+
+  function spawnPetal() {
+    if (activePetals >= MAX_PETALS) return;
+    activePetals++;
+
+    const petal = document.createElement('div');
+    petal.className = 'petal';
+    const size = 10 + Math.random() * 14; // 10-24px
+    const left = Math.random() * 100;
+    const duration = 8 + Math.random() * 7; // 8-15s fall
+    const swayDur = 2 + Math.random() * 3; // 2-5s sway
+    const delay = Math.random() * 2;
+
+    petal.style.cssText = `left:${left}%;width:${size}px;height:${size}px;animation-duration:${duration}s;animation-delay:${delay}s;`;
+
+    const shape = document.createElement('div');
+    shape.className = 'petal-shape';
+    shape.style.animationDuration = swayDur + 's';
+    shape.innerHTML = shapes[Math.floor(Math.random() * shapes.length)];
+    petal.appendChild(shape);
+    container.appendChild(petal);
+
+    setTimeout(() => {
+      petal.remove();
+      activePetals--;
+    }, (duration + delay) * 1000);
+  }
+
+  // Spawn petals at intervals
+  function loop() {
+    spawnPetal();
+    setTimeout(loop, 600 + Math.random() * 1200);
+  }
+
+  // Only run when page is visible
+  let running = true;
+  document.addEventListener('visibilitychange', () => {
+    running = !document.hidden;
+  });
+
+  // Start after a short delay
+  setTimeout(() => {
+    loop();
+  }, 1500);
+})();
 </script>
 </body>
 </html>
