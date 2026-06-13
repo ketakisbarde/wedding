@@ -2160,16 +2160,16 @@ function showRSVPSuccess(form, btn) {
   setTimeout(() => { if (!playing) label.classList.add('hidden'); }, 5000);
 })();
 
-// Photo slideshows (Seattle + Carmel)
+// Photo slideshows — only run when visible (saves CPU on mobile)
 document.querySelectorAll('.seattle-photos, .carmel-photos, .everythingship-photos, .jabwemet-photos').forEach(container => {
   const imgs = container.querySelectorAll('img');
   if (!imgs.length) return;
   let idx = 0;
-  setInterval(() => {
-    imgs[idx].classList.remove('active');
-    idx = (idx + 1) % imgs.length;
-    imgs[idx].classList.add('active');
-  }, 3000);
+  let timer = null;
+  function start() { if (!timer) timer = setInterval(() => { imgs[idx].classList.remove('active'); idx = (idx + 1) % imgs.length; imgs[idx].classList.add('active'); }, 3000); }
+  function stop() { clearInterval(timer); timer = null; }
+  const obs = new IntersectionObserver(([e]) => e.isIntersecting ? start() : stop(), { threshold: 0.1 });
+  obs.observe(container);
 });
 
 /* ---------- Floating Petals (desktop only) ---------- */
