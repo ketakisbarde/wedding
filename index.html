@@ -2037,16 +2037,15 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     }
   }, { passive: true });
 
-  // Reset to slide 0 when story section scrolls into view
+  // Only auto-advance when story section is visible
   const storySection = document.getElementById('story');
   const storyObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) { goTo(0); startAuto(); }
+      if (e.isIntersecting) { startAuto(); }
+      else { stopAuto(); }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.15 });
   storyObserver.observe(storySection);
-
-  startAuto();
 })();
 
 // ---- RSVP FORM ----
@@ -2166,7 +2165,7 @@ document.querySelectorAll('.seattle-photos, .carmel-photos, .everythingship-phot
   if (!imgs.length) return;
   let idx = 0;
   let timer = null;
-  function start() { if (!timer) timer = setInterval(() => { imgs[idx].classList.remove('active'); idx = (idx + 1) % imgs.length; imgs[idx].classList.add('active'); }, 3000); }
+  function start() { if (!timer) timer = setInterval(() => { imgs[idx].classList.remove('active'); idx = (idx + 1) % imgs.length; imgs[idx].classList.add('active'); }, 4000); }
   function stop() { clearInterval(timer); timer = null; }
   const obs = new IntersectionObserver(([e]) => e.isIntersecting ? start() : stop(), { threshold: 0.1 });
   obs.observe(container);
