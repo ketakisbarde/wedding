@@ -2029,6 +2029,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   const total = slides.length;
   let current = 0;
   let autoTimer = null;
+  let userInteracted = false; // once user taps/clicks, auto stays off
 
   function goTo(n) {
     slides[current].classList.remove('active');
@@ -2038,20 +2039,16 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     dots[current].classList.add('active');
   }
 
-  function startAuto() {
-    stopAuto();
-    autoTimer = setInterval(() => goTo(current + 1), 12000);
-  }
-  function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
+  function stopAuto() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
 
-  document.getElementById('carouselPrev').addEventListener('click', () => { goTo(current - 1); startAuto(); });
-  document.getElementById('carouselNext').addEventListener('click', () => { goTo(current + 1); startAuto(); });
-  dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.dot); startAuto(); }));
+  document.getElementById('carouselPrev').addEventListener('click', () => { userInteracted = true; stopAuto(); goTo(current - 1); });
+  document.getElementById('carouselNext').addEventListener('click', () => { userInteracted = true; stopAuto(); goTo(current + 1); });
+  dots.forEach(d => d.addEventListener('click', () => { userInteracted = true; stopAuto(); goTo(+d.dataset.dot); }));
 
   // Keyboard nav
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') { goTo(current - 1); startAuto(); }
-    if (e.key === 'ArrowRight') { goTo(current + 1); startAuto(); }
+    if (e.key === 'ArrowLeft') { userInteracted = true; stopAuto(); goTo(current - 1); }
+    if (e.key === 'ArrowRight') { userInteracted = true; stopAuto(); goTo(current + 1); }
   });
 
   // Touch swipe
@@ -2061,20 +2058,10 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   track.addEventListener('touchend', e => {
     const dx = e.changedTouches[0].clientX - touchX;
     if (Math.abs(dx) > 50) {
+      userInteracted = true; stopAuto();
       goTo(current + (dx < 0 ? 1 : -1));
-      startAuto();
     }
   }, { passive: true });
-
-  // Only auto-advance when story section is visible
-  const storySection = document.getElementById('story');
-  const storyObserver = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { startAuto(); }
-      else { stopAuto(); }
-    });
-  }, { threshold: 0.15 });
-  storyObserver.observe(storySection);
 })();
 
 // ---- RSVP FORM ----
