@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aashrai &amp; Ketaki — August 16, 2026</title>
+<meta name="description" content="Wedding celebration of Aashrai Puthran and Ketaki Barde — August 16, 2026 at Château Mt Eden, Saratoga, CA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   CSS VARIABLES & RESET
+   ============================================ */
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8D5A0;
+  --marigold: #E8A317;
+  --cream: #FFF9F0;
+  --cream-dark: #F5EDE0;
+  --warm: #F7E8D0;
+  --blush: #F5D5C8;
+  --rose: #D4837D;
+  --burgundy: #7A2E3A;
+  --dark: #0C1524;
+  --dark2: #162033;
+  --dark3: #1E2A42;
+  --text: #3A3632;
+  --text-light: #8A8578;
+  --white: #FFFFFF;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Montserrat', 'Segoe UI', sans-serif;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-body); color: var(--text); background: var(--cream); overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--gold); text-decoration: none; transition: color 0.3s; }
+a:hover { color: var(--marigold); }
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 16px 32px;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: background 0.4s, box-shadow 0.4s;
+}
+.nav.scrolled {
+  background: rgba(12,21,36,0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.nav-logo {
+  font-family: var(--font-display); font-size: 1.1em; font-weight: 600;
+  color: var(--gold-light); letter-spacing: 2px; text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a {
+  font-family: var(--font-sans); font-size: 0.72em; font-weight: 500;
+  color: var(--gold-light); letter-spacing: 1.5px; text-transform: uppercase;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.nav-toggle span {
+  display: block; width: 24px; height: 2px; background: var(--gold-light);
+  margin: 5px 0; transition: all 0.3s;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column;
+  justify-content: center; align-items: center; text-align: center;
+  background: var(--dark); position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(160deg, #0a0e1a 0%, #0C1524 25%, #1a1a3e 50%, #0f1d3e 75%, #0C1524 100%);
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 85%, rgba(232,163,23,0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 30%, rgba(201,168,76,0.06) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 20%, rgba(122,46,58,0.08) 0%, transparent 40%);
+}
+.hero-content { position: relative; z-index: 2; padding: 40px 24px; }
+.hero-date-top {
+  font-family: var(--font-sans); font-size: 0.75em; font-weight: 400;
+  letter-spacing: 6px; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(3em, 8vw, 6em); line-height: 1.1; color: var(--cream);
+}
+.hero h1 .amp {
+  font-style: italic; color: var(--gold); font-size: 0.7em;
+  display: inline-block; margin: 0 12px; vertical-align: middle;
+}
+.hero-subtitle {
+  font-family: var(--font-body); font-size: 1.35em; font-weight: 300;
+  color: var(--gold-light); margin-top: 20px; font-style: italic;
+}
+.hero-line { width: 60px; height: 1px; background: var(--gold); margin: 28px auto; }
+.hero-venue {
+  font-family: var(--font-sans); font-size: 0.8em; font-weight: 300;
+  color: rgba(255,249,240,0.6); letter-spacing: 3px; text-transform: uppercase;
+}
+.stars { position: absolute; inset: 0; z-index: 1; }
+.star {
+  position: absolute; border-radius: 50%;
+  animation: shimmer var(--dur) ease-in-out infinite;
+}
+.star.bright {
+  box-shadow: 0 0 6px 2px rgba(232,213,160,0.6), 0 0 12px 4px rgba(201,168,76,0.3);
+}
+@keyframes shimmer {
+  0%, 100% { opacity: 0.1; transform: scale(0.8); box-shadow: 0 0 2px 0px rgba(232,213,160,0.2); }
+  50% { opacity: 1; transform: scale(1.5); box-shadow: 0 0 8px 3px rgba(232,213,160,0.5), 0 0 16px 6px rgba(201,168,76,0.2); }
+}
+/* Shooting stars */
+.shooting-star {
+  position: absolute; width: 80px; height: 1px; z-index: 1;
+  background: linear-gradient(to right, rgba(232,213,160,0.8), transparent);
+  animation: shoot var(--shoot-dur) linear infinite;
+  opacity: 0;
+}
+@keyframes shoot {
+  0% { transform: translateX(0) translateY(0) rotate(-35deg); opacity: 0; }
+  5% { opacity: 1; }
+  15% { opacity: 1; }
+  30% { transform: translateX(300px) translateY(200px) rotate(-35deg); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ============================================
+   ORNAMENT
+   ============================================ */
+.ornament {
+  text-align: center; padding: 32px 0;
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+}
+.ornament-icon { font-size: 1.3em; color: var(--gold); opacity: 0.8; }
+.ornament-line {
+  width: 80px; height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+/* ============================================
+   COUNTDOWN
+   ============================================ */
+.countdown-section { background: var(--dark2); padding: 60px 24px; text-align: center; }
+.countdown-label {
+  font-family: var(--font-sans); font-size: 0.7em; font-weight: 500;
+  letter-spacing: 5px; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 32px;
+}
+.countdown { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.countdown-item { text-align: center; }
+.countdown-num {
+  font-family: var(--font-display); font-size: 3.2em; font-weight: 300;
+  color: var(--cream); line-height: 1;
+}
+.countdown-unit {
+  font-family: var(--font-sans); font-size: 0.65em; font-weight: 400;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--text-light); margin-top: 8px;
+}
+
+/* ============================================
+   COUPLE
+   ============================================ */
+.couple-section { padding: 100px 24px; background: var(--cream); }
+.couple-grid {
+  max-width: 900px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+}
+.couple-card { text-align: center; }
+.couple-photo {
+  width: 240px; height: 300px; margin: 0 auto 24px;
+  border-radius: 200px 200px 20px 20px; overflow: hidden;
+  border: 3px solid var(--gold); background: var(--warm);
+  box-shadow: 0 8px 32px rgba(201,168,76,0.15); position: relative;
+}
+.couple-photo img { width: 100%; height: 100%; object-fit: cover; }
+.couple-photo .placeholder {
+  width: 100%; height: 100%; display: flex; align-items: center;
+  justify-content: center; font-size: 4em;
+  background: linear-gradient(135deg, var(--blush), var(--warm));
+}
+.couple-role {
+  font-family: var(--font-sans); font-size: 0.65em; font-weight: 500;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+}
+.couple-name {
+  font-family: var(--font-display); font-size: 1.8em; font-weight: 600;
+  color: var(--dark); margin-bottom: 12px;
+}
+.couple-bio {
+  font-family: var(--font-body); font-size: 1.05em; font-style: italic;
+  color: var(--text-light); line-height: 1.6; max-width: 300px; margin: 0 auto;
+}
+
+/* ============================================
+   SECTION HEADERS
+   ============================================ */
+.section-header { text-align: center; padding: 80px 24px 40px; }
+.section-eyebrow {
+  font-family: var(--font-sans); font-size: 0.65em; font-weight: 500;
+  letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+}
+.section-title {
+  font-family: var(--font-display); font-size: clamp(2em, 5vw, 3em);
+  font-weight: 400; color: var(--dark);
+}
+.section-subtitle {
+  font-family: var(--font-body); font-size: 1.15em; font-style: italic;
+  color: var(--text-light); margin-top: 12px; max-width: 500px; margin-left: auto; margin-right: auto;
+}
+
+/* ============================================
+   STORY CAROUSEL
+   ============================================ */
+.story-section {
+  background: var(--dark); padding: 80px 0; position: relative; overflow: hidden;
+}
+.story-section::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(232,163,23,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(201,168,76,0.05) 0%, transparent 50%);
+}
+.story-section .section-header { padding: 0 24px 40px; }
+.story-section .section-eyebrow { color: var(--marigold); }
+.story-section .section-title { color: var(--cream); }
+.story-section .section-subtitle { color: var(--gold-light); }
+
+/* Carousel container */
+.carousel-wrapper {
+  position: relative; max-width: 1100px; margin: 0 auto; padding: 0 60px;
+}
+.carousel-track {
+  display: flex; overflow: hidden; position: relative;
+}
+.carousel-slide {
+  min-width: 100%; display: grid;
+  grid-template-columns: 1fr 1fr; gap: 48px; padding: 0 24px;
+  align-items: center; opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute; top: 0; left: 0; width: 100%;
+}
+.carousel-slide.active { opacity: 1; position: relative; }
+
+.slide-visual {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 320px; border-radius: 16px; overflow: hidden;
+  position: relative;
+}
+.slide-icon-display {
+  font-size: 6em; position: relative; z-index: 2;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3));
+}
+.slide-icon-display.animated {
+  animation: iconBounce 2s ease-in-out infinite;
+}
+@keyframes iconBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* SVG slide scenes */
+.slide-scene {
+  width: 100%; height: 100%; position: relative; z-index: 2;
+}
+/* Mumbai rickshaw bounce → now train rumble (handled by .train-anim) */
+/* Flight plane along arc */
+.flight-plane-anim {
+  animation: flyPath 4s ease-in-out infinite;
+  offset-path: path('M131,100 Q200,30 268,80');
+  offset-distance: 0%;
+}
+@keyframes flyPath { 0% { offset-distance: 0%; } 100% { offset-distance: 100%; } }
+/* Ferry gliding */
+.ferry-anim { animation: ferryGlide 5s ease-in-out infinite; }
+@keyframes ferryGlide {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(20px) translateY(-2px); }
+}
+/* Key falling */
+.key-fall-anim { animation: keyFall 3s ease-in-out infinite; }
+@keyframes keyFall {
+  0%, 60% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  80% { transform: translateY(30px) rotate(180deg); opacity: 0.6; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+}
+/* Wave animation */
+.wave-anim { animation: waveMove 3s ease-in-out infinite; }
+@keyframes waveMove {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+/* Ferris wheel spin */
+.wheel-spin { animation: wheelSpin 8s linear infinite; transform-origin: center; }
+@keyframes wheelSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+/* Sunset pulse */
+.sunset-pulse { animation: sunPulse 3s ease-in-out infinite; }
+@keyframes sunPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+/* Ring sparkle */
+.ring-sparkle { animation: ringFloat 2.5s ease-in-out infinite; }
+@keyframes ringFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.sparkle-1 { animation: sparkBlink 1.5s ease-in-out infinite; }
+.sparkle-2 { animation: sparkBlink 1.8s ease-in-out 0.3s infinite; }
+.sparkle-3 { animation: sparkBlink 2s ease-in-out 0.6s infinite; }
+@keyframes sparkBlink {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+/* Yes text */
+.yes-anim { animation: yesReveal 2.5s ease-in-out infinite; }
+@keyframes yesReveal {
+  0%, 100% { opacity: 0.5; letter-spacing: 1px; }
+  50% { opacity: 1; letter-spacing: 4px; }
+}
+/* Floating hearts */
+.float-heart-1 { animation: heartFloat 3s ease-in-out infinite; }
+.float-heart-2 { animation: heartFloat 3.5s ease-in-out 0.5s infinite; }
+.float-heart-3 { animation: heartFloat 4s ease-in-out 1s infinite; }
+@keyframes heartFloat {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
+  50% { transform: translateY(-10px) scale(1.15); opacity: 1; }
+}
+/* Train animation */
+.train-anim { animation: trainRumble 0.8s ease-in-out infinite; }
+@keyframes trainRumble {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(1px) translateY(-1px); }
+  75% { transform: translateX(-1px) translateY(0.5px); }
+}
+/* Vada pav vendor bob */
+.vadapav-anim { animation: vendorBob 3s ease-in-out infinite; }
+@keyframes vendorBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+/* Steam rising */
+.steam-anim { animation: steamRise 2s ease-out infinite; }
+@keyframes steamRise {
+  0% { opacity: 0.6; transform: translateY(0) scaleX(1); }
+  100% { opacity: 0; transform: translateY(-12px) scaleX(1.5); }
+}
+/* Heart pulse */
+.heart-pulse-anim { animation: heartPulse 2s ease-in-out infinite; }
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+/* Fire flicker */
+.fire-flicker { animation: fireFlick 0.5s ease-in-out infinite alternate; }
+@keyframes fireFlick {
+  0% { transform: scaleX(1) scaleY(1); }
+  100% { transform: scaleX(0.92) scaleY(1.06); }
+}
+/* Couple sway */
+.couple-sway-1 { animation: coupleSway 3s ease-in-out infinite; }
+.couple-sway-2 { animation: coupleSway 3s ease-in-out 0.3s infinite; }
+@keyframes coupleSway {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(2px) rotate(0.5deg); }
+}
+.slide-bg {
+  position: absolute; inset: 0; border-radius: 16px;
+}
+.slide-bg.mumbai {
+  background: linear-gradient(135deg, #FF9933 0%, #E8A317 40%, #FFD700 100%);
+}
+.slide-bg.roc {
+  background: linear-gradient(135deg, #B3CDE3 0%, #6497B1 50%, #005B96 100%);
+}
+.slide-bg.ldr {
+  background: linear-gradient(135deg, #F7C59F 0%, #C5CAE9 50%, #A8D8EA 100%);
+}
+.slide-bg.sea {
+  background: linear-gradient(135deg, #2E8B57 0%, #3CB371 50%, #87CEAB 100%);
+}
+.slide-bg.bay {
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 50%, #FFC857 100%);
+}
+.slide-bg.carmel {
+  background: linear-gradient(135deg, #E8846B 0%, #F4A460 50%, #FFD700 100%);
+}
+
+/* Photo slideshows */
+.seattle-photos, .carmel-photos, .everythingship-photos, .jabwemet-photos { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; border-radius: 16px; overflow: hidden; }
+.seattle-photos img, .carmel-photos img, .everythingship-photos img, .jabwemet-photos img {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center center; opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.seattle-photos img.active, .carmel-photos img.active, .everythingship-photos img.active, .jabwemet-photos img.active { opacity: 1; }
+
+.slide-bg.forever {
+  background: linear-gradient(135deg, #C9A84C 0%, #E8D5A0 50%, #FFD700 100%);
+}
+
+.slide-photo-placeholder {
+  width: 100%; height: 100%; display: flex; align-items: center;
+  justify-content: center; flex-direction: column; gap: 12px;
+  font-family: var(--font-sans); font-size: 0.75em; color: rgba(0,0,0,0.5);
+  text-align: center; padding: 20px;
+}
+
+.slide-content { padding: 20px 0; }
+.slide-label {
+  font-family: var(--font-sans); font-size: 0.6em; font-weight: 500;
+  letter-spacing: 5px; text-transform: uppercase; color: var(--marigold);
+  margin-bottom: 12px;
+}
+.slide-title {
+  font-family: var(--font-display); font-size: 2em; font-weight: 600;
+  color: var(--cream); margin-bottom: 16px; line-height: 1.2;
+}
+.slide-desc {
+  font-family: var(--font-body); font-size: 1.15em; font-style: italic;
+  color: var(--gold-light); line-height: 1.7; max-width: 450px;
+}
+.slide-quote {
+  font-family: var(--font-body); font-size: 1em;
+  color: var(--marigold); margin-top: 16px; padding-left: 16px;
+  border-left: 2px solid var(--gold);
+}
+
+/* Carousel controls */
+.carousel-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%;
+  background: rgba(201,168,76,0.15); border: 1px solid var(--gold);
+  color: var(--gold); font-size: 1.2em; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s; z-index: 10;
+}
+.carousel-btn:hover { background: var(--gold); color: var(--dark); }
+.carousel-btn.prev { left: 8px; }
+.carousel-btn.next { right: 8px; }
+
+/* Carousel dots */
+.carousel-dots {
+  display: flex; justify-content: center; gap: 10px; margin-top: 40px;
+  padding: 0 24px;
+}
+.carousel-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: rgba(201,168,76,0.3); border: none; cursor: pointer;
+  transition: all 0.3s; padding: 0;
+}
+.carousel-dot.active { background: var(--gold); transform: scale(1.2); }
+.carousel-dot:hover { background: var(--gold-light); }
+
+/* Dot labels on hover */
+.dot-label {
+  font-family: var(--font-sans); font-size: 0.6em; letter-spacing: 1px;
+  color: var(--gold-light); text-align: center; margin-top: 8px;
+  opacity: 0; transition: opacity 0.3s;
+  position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%);
+  white-space: nowrap;
+}
+.dot-wrapper { position: relative; display: inline-flex; flex-direction: column; align-items: center; }
+.dot-wrapper:hover .dot-label { opacity: 1; }
+
+/* ============================================
+   WEDDING DETAILS
+   ============================================ */
+.details-section {
+  background: var(--dark); color: var(--cream); padding: 100px 24px; position: relative;
+}
+.details-section::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 0%, rgba(122,46,58,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 100%, rgba(201,168,76,0.06) 0%, transparent 50%);
+}
+.details-section .section-eyebrow { color: var(--gold); }
+.details-section .section-title { color: var(--cream); }
+.details-section .section-subtitle { color: var(--gold-light); }
+.details-grid {
+  max-width: 900px; margin: 48px auto 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
+  text-align: center; position: relative;
+}
+.detail-card {
+  padding: 32px 20px; border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 12px; background: rgba(255,255,255,0.03); position: relative;
+}
+.detail-card::before {
+  content: '✦'; position: absolute; top: -8px; left: 50%; transform: translateX(-50%);
+  font-size: 0.7em; color: var(--gold); background: var(--dark); padding: 0 8px;
+}
+.detail-icon { font-size: 2em; margin-bottom: 16px; }
+.detail-label {
+  font-family: var(--font-sans); font-size: 0.6em; font-weight: 500;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+}
+.detail-value {
+  font-family: var(--font-display); font-size: 1.3em; font-weight: 400;
+  color: var(--cream); line-height: 1.5;
+}
+.detail-sub {
+  font-family: var(--font-body); font-size: 0.95em; font-style: italic;
+  color: var(--gold-light); margin-top: 8px;
+}
+.venue-map { max-width: 900px; margin: 48px auto 0; text-align: center; }
+.venue-map iframe {
+  width: 100%; height: 350px; border: none; border-radius: 12px;
+  filter: grayscale(0.3) contrast(1.1);
+}
+.map-buttons { display: flex; justify-content: center; gap: 16px; margin-top: 24px; }
+.map-btn {
+  font-family: var(--font-sans); font-size: 0.7em; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 12px 28px; border-radius: 30px;
+  border: 1px solid var(--gold); color: var(--gold);
+  transition: all 0.3s; display: inline-block;
+}
+.map-btn:hover { background: var(--gold); color: var(--dark); }
+
+/* Events Timeline */
+.events-timeline {
+  max-width: 600px; margin: 48px auto 0; position: relative; padding-left: 40px;
+}
+.events-timeline::before {
+  content: ''; position: absolute; left: 12px; top: 0; bottom: 0;
+  width: 1px; background: var(--gold);
+}
+.event-item { position: relative; margin-bottom: 36px; padding-left: 24px; }
+.event-item::before {
+  content: ''; position: absolute; left: -33px; top: 6px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--gold); border: 2px solid var(--dark);
+}
+.event-time {
+  font-family: var(--font-sans); font-size: 0.7em; font-weight: 500;
+  letter-spacing: 2px; color: var(--gold); margin-bottom: 4px;
+}
+.event-name { font-family: var(--font-display); font-size: 1.3em; font-weight: 400; color: var(--cream); }
+.event-desc { font-family: var(--font-body); font-size: 0.95em; font-style: italic; color: var(--gold-light); margin-top: 4px; }
+
+/* Dress Code */
+.dresscode {
+  max-width: 600px; margin: 48px auto 0; text-align: center;
+  padding: 32px; border: 1px solid rgba(201,168,76,0.3); border-radius: 12px; position: relative;
+}
+.dresscode::before {
+  content: '❧'; position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+  font-size: 0.9em; color: var(--gold); background: var(--dark); padding: 0 12px;
+}
+.dresscode-title {
+  font-family: var(--font-sans); font-size: 0.6em; font-weight: 500;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+}
+.dresscode-text { font-family: var(--font-display); font-size: 1.4em; color: var(--cream); }
+.dresscode-sub { font-family: var(--font-body); font-size: 1em; font-style: italic; color: var(--gold-light); margin-top: 8px; }
+
+/* ============================================
+   RSVP FORM
+   ============================================ */
+.rsvp-section {
+  padding: 100px 24px; background: var(--cream); text-align: center;
+}
+.rsvp-form {
+  max-width: 600px; margin: 40px auto 0; text-align: left;
+  background: var(--white); border-radius: 16px;
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 40px 36px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+}
+.form-row { margin-bottom: 24px; }
+.form-row-half { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.form-label {
+  font-family: var(--font-sans); font-size: 0.7em; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 8px; display: block;
+}
+.form-input, .form-select, .form-textarea {
+  width: 100%; padding: 12px 16px;
+  font-family: var(--font-body); font-size: 1.05em;
+  border: 1px solid rgba(201,168,76,0.3); border-radius: 8px;
+  background: var(--cream); color: var(--text);
+  transition: border-color 0.3s;
+  -webkit-appearance: none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none; border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+}
+.form-textarea { min-height: 80px; resize: vertical; }
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23C9A84C' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
+  padding-right: 40px; cursor: pointer;
+}
+
+/* Radio group */
+.radio-group { display: flex; gap: 16px; margin-top: 4px; }
+.radio-option {
+  display: flex; align-items: center; gap: 8px; cursor: pointer;
+  font-family: var(--font-body); font-size: 1.05em; color: var(--text);
+}
+.radio-option input[type="radio"] {
+  appearance: none; width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid var(--gold); cursor: pointer; position: relative;
+  flex-shrink: 0;
+}
+.radio-option input[type="radio"]:checked::after {
+  content: ''; position: absolute; inset: 3px; border-radius: 50%;
+  background: var(--gold);
+}
+
+/* Plus one section */
+.plus-one-fields {
+  max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s;
+  padding-top: 0;
+}
+.plus-one-fields.show { max-height: 300px; padding-top: 16px; }
+
+/* Submit */
+.form-submit {
+  display: block; width: 100%; margin-top: 32px;
+  font-family: var(--font-sans); font-size: 0.8em; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase;
+  padding: 16px; border-radius: 40px; border: 2px solid var(--gold);
+  background: var(--gold); color: var(--dark); cursor: pointer;
+  transition: all 0.3s;
+}
+.form-submit:hover { background: transparent; color: var(--gold); }
+
+/* Success message */
+.rsvp-success {
+  display: none; text-align: center; padding: 40px 20px;
+}
+.rsvp-success .check-icon { font-size: 3em; margin-bottom: 16px; }
+.rsvp-success h3 {
+  font-family: var(--font-display); font-size: 1.6em; color: var(--dark);
+  margin-bottom: 12px;
+}
+.rsvp-success p {
+  font-family: var(--font-body); font-size: 1.1em; font-style: italic;
+  color: var(--text-light);
+}
+
+/* ============================================
+   REGISTRY
+   ============================================ */
+.link-section { padding: 80px 24px; text-align: center; }
+.link-section.alt { background: var(--cream-dark); }
+.cta-btn {
+  display: inline-block; margin-top: 32px;
+  font-family: var(--font-sans); font-size: 0.75em; font-weight: 500;
+  letter-spacing: 3px; text-transform: uppercase;
+  padding: 16px 48px; border-radius: 40px;
+  background: var(--gold); color: var(--dark);
+  transition: all 0.3s; border: 2px solid var(--gold);
+}
+.cta-btn:hover { background: transparent; color: var(--gold); }
+
+/* ============================================
+   GALLERY
+   ============================================ */
+.gallery-section { padding: 80px 24px; background: var(--cream); }
+.gallery-grid {
+  max-width: 1100px; margin: 40px auto 0;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+}
+.gallery-item {
+  aspect-ratio: 3/2; border-radius: 10px; overflow: hidden;
+  background: var(--warm); cursor: pointer; transition: transform 0.3s;
+}
+.gallery-item:hover { transform: scale(1.03); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+.gallery-item video { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+.gallery-item .placeholder-img {
+  width: 100%; height: 100%; display: flex; align-items: center;
+  justify-content: center; font-size: 2em;
+  background: linear-gradient(135deg, var(--warm), var(--blush));
+}
+
+/* ============================================
+   TRAVEL
+   ============================================ */
+.travel-section { padding: 80px 24px; background: var(--cream); }
+.travel-grid {
+  max-width: 1000px; margin: 40px auto 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.travel-card {
+  padding: 32px 24px; background: var(--white); border-radius: 12px;
+  border: 1px solid rgba(201,168,76,0.2); text-align: center;
+}
+.travel-icon { font-size: 2em; margin-bottom: 12px; }
+.travel-title {
+  font-family: var(--font-display); font-size: 1.2em; font-weight: 600;
+  color: var(--dark); margin-bottom: 8px;
+}
+.travel-text {
+  font-family: var(--font-body); font-size: 1em; color: var(--text-light); line-height: 1.6;
+}
+
+/* ============================================
+   DISTANCE
+   ============================================ */
+.distance-section { padding: 80px 24px; background: var(--dark2); text-align: center; }
+.distance-section .section-title { color: var(--cream); }
+.distance-value {
+  font-family: var(--font-display); font-size: 3em; color: var(--gold); margin: 24px 0 8px;
+}
+.distance-sub {
+  font-family: var(--font-body); font-size: 1.1em; font-style: italic; color: var(--gold-light);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--dark); padding: 60px 24px; text-align: center; position: relative;
+}
+.footer::before {
+  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 200px; height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+.footer-monogram { font-family: var(--font-display); font-size: 2.5em; color: var(--gold); margin-bottom: 16px; }
+.footer-message {
+  font-family: var(--font-body); font-size: 1.15em; font-style: italic;
+  color: var(--gold-light); max-width: 500px; margin: 0 auto 24px; line-height: 1.7;
+}
+.footer-copy {
+  font-family: var(--font-sans); font-size: 0.7em;
+  color: rgba(255,249,240,0.3); letter-spacing: 2px;
+}
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+.reveal {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
+
+/* ============================================
+   MUSIC PLAYER (floating)
+   ============================================ */
+.music-player {
+  position: fixed; bottom: 24px; right: 24px; z-index: 1000;
+  display: flex; align-items: center; gap: 10px;
+}
+.music-btn {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(12,21,36,0.85); border: 1.5px solid var(--gold);
+  color: var(--gold); font-size: 1.2em; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s; backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.music-btn:hover { background: var(--gold); color: var(--dark); transform: scale(1.08); }
+.music-btn.playing .music-icon { display: none; }
+.music-btn.playing .music-bars { display: flex; }
+.music-bars { display: none; gap: 2px; align-items: flex-end; height: 16px; }
+.music-bars .bar {
+  width: 3px; background: currentColor; border-radius: 2px;
+  animation: barPulse 0.8s ease-in-out infinite;
+}
+.music-bars .bar:nth-child(1) { height: 8px; animation-delay: 0s; }
+.music-bars .bar:nth-child(2) { height: 14px; animation-delay: 0.15s; }
+.music-bars .bar:nth-child(3) { height: 10px; animation-delay: 0.3s; }
+.music-bars .bar:nth-child(4) { height: 12px; animation-delay: 0.45s; }
+@keyframes barPulse {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1.3); }
+}
+.music-label {
+  font-family: var(--font-sans); font-size: 0.65em; font-weight: 500;
+  letter-spacing: 1px; text-transform: uppercase; color: var(--gold);
+  background: rgba(12,21,36,0.8); padding: 6px 12px; border-radius: 20px;
+  backdrop-filter: blur(8px); border: 1px solid rgba(201,168,76,0.3);
+  opacity: 1; transition: opacity 0.3s;
+  pointer-events: none;
+}
+.music-label.hidden { opacity: 0; }
+
+/* ============================================
+   MOBILE
+   ============================================ */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 56px; left: 0; right: 0;
+    background: rgba(12,21,36,0.95); backdrop-filter: blur(12px);
+    padding: 24px; gap: 20px; text-align: center;
+  }
+  .nav-toggle { display: block; }
+  .couple-grid { grid-template-columns: 1fr; gap: 40px; }
+  .details-grid { grid-template-columns: 1fr; gap: 24px; }
+  .travel-grid { grid-template-columns: 1fr; }
+  .countdown { gap: 24px; }
+  .countdown-num { font-size: 2.4em; }
+  .hero h1 { font-size: clamp(2.2em, 10vw, 4em); }
+  .map-buttons { flex-direction: column; align-items: center; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .carousel-slide { grid-template-columns: 1fr; gap: 24px; }
+  .slide-visual { min-height: 220px; }
+  .slide-icon-display { font-size: 4em; }
+  .carousel-wrapper { padding: 0 44px; }
+  .carousel-btn { width: 36px; height: 36px; font-size: 1em; }
+  .carousel-btn.prev { left: 4px; }
+  .carousel-btn.next { right: 4px; }
+  .form-row-half { grid-template-columns: 1fr; }
+  .rsvp-form { padding: 28px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">A &amp; K</div>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#details">Details</a></li>
+    <li><a href="#rsvp">RSVP</a></li>
+    <li><a href="#travel">Travel</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+  </ul>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero" id="home">
+  <div class="stars" id="stars"></div>
+  <div class="hero-content">
+    <div class="hero-date-top reveal">The Sixteenth of August, Two Thousand &amp; Twenty-Six</div>
+    <h1 class="reveal reveal-delay-1">Aashrai <span class="amp">&amp;</span> Ketaki</h1>
+    <p class="hero-subtitle reveal reveal-delay-2">Every mile, every city, every time zone, every chapter led us here.</p>
+    <div class="hero-line reveal reveal-delay-2"></div>
+    <p class="hero-venue reveal reveal-delay-3">Château Mt Eden · Saratoga, California</p>
+  </div>
+</section>
+
+<!-- ============================================
+     COUNTDOWN
+     ============================================ -->
+<section class="countdown-section">
+  <div class="countdown-label">A Sky Full of Stars Until</div>
+  <div class="countdown" id="countdown">
+    <div class="countdown-item"><div class="countdown-num" id="cd-days">00</div><div class="countdown-unit">Days</div></div>
+    <div class="countdown-item"><div class="countdown-num" id="cd-hours">00</div><div class="countdown-unit">Hours</div></div>
+    <div class="countdown-item"><div class="countdown-num" id="cd-mins">00</div><div class="countdown-unit">Minutes</div></div>
+    <div class="countdown-item"><div class="countdown-num" id="cd-secs">00</div><div class="countdown-unit">Seconds</div></div>
+  </div>
+</section>
+
+<!-- ============================================
+     COUPLE
+     ============================================ -->
+<section class="couple-section">
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-icon">✦</div>
+    <div class="ornament-line"></div>
+  </div>
+  <div class="couple-grid">
+    <div class="couple-card reveal">
+      <div class="couple-photo">
+        <img src="ketaki-bio.jpeg" alt="Ketaki" style="width:100%;height:100%;object-fit:cover;transform:scale(1.3);object-position:center 20%;">
+      </div>
+      <div class="couple-role">The Bride</div>
+      <div class="couple-name">Ketaki</div>
+      <p class="couple-bio">Chai-powered techie, saving days as souvenirs, Marathi mulgi, funnier than Ash, and only slightly more competitive than she admits. Happiest somewhere between the mountains and the sea.</p>
+    </div>
+    <div class="couple-card reveal reveal-delay-2">
+      <div class="couple-photo">
+        <img src="ash-bio.jpeg" alt="Aashrai" style="width:100%;height:100%;object-fit:cover;transform:scale(1.4);object-position:center 20%;">
+      </div>
+      <div class="couple-role">The Groom</div>
+      <div class="couple-name">Aashrai</div>
+      <p class="couple-bio">Adrenaline junkie, thrill-seeker, Barça boy, fan of Might Guy, kind & curious, and never skips dessert. Happiest when winning Call of Duty Warzone missions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     OUR STORY — CAROUSEL
+     ============================================ -->
+<section class="story-section" id="story">
+  <div class="section-header">
+    <div class="section-eyebrow reveal">Our Story</div>
+    <h2 class="section-title reveal">The Adventure of a Lifetime</h2>
+    <p class="section-subtitle reveal">8,000+ miles, 3 time zones, and infinite chai</p>
+  </div>
+
+  <div class="carousel-wrapper reveal">
+    <button class="carousel-btn prev" id="carouselPrev" aria-label="Previous">&#8592;</button>
+    <button class="carousel-btn next" id="carouselNext" aria-label="Next">&#8594;</button>
+
+    <div class="carousel-track" id="carouselTrack">
+
+      <!-- SLIDE 1: MUMBAI -->
+      <div class="carousel-slide active" data-slide="0">
+        <div class="slide-visual">
+          <div class="slide-bg mumbai"></div>
+          <!-- Mumbai: Cute Kaali-Peeli taxi + Gateway + skyline (flat illustration) -->
+          <svg class="slide-scene" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Warm sunset sky -->
+            <rect x="0" y="0" width="400" height="300" fill="rgba(255,200,120,0.06)"/>
+            <!-- Fluffy clouds -->
+            <g opacity="0.2">
+              <ellipse cx="80" cy="28" rx="32" ry="13" fill="#fde8c8"/>
+              <ellipse cx="60" cy="22" rx="20" ry="10" fill="#fce4be"/>
+              <ellipse cx="105" cy="25" rx="22" ry="9" fill="#fce4be"/>
+            </g>
+            <g opacity="0.15">
+              <ellipse cx="310" cy="35" rx="28" ry="11" fill="#fde8c8"/>
+              <ellipse cx="335" cy="30" rx="18" ry="8" fill="#fce4be"/>
+            </g>
+            <!-- Sun -->
+            <circle cx="350" cy="50" r="22" fill="rgba(255,180,50,0.35)"/>
+            <circle cx="350" cy="50" r="16" fill="rgba(255,200,80,0.4)"/>
+
+            <!-- ======== MUMBAI SKYLINE (cute flat) ======== -->
+            <!-- Gateway of India (center back) -->
+            <g opacity="0.7">
+              <rect x="175" y="80" width="50" height="65" fill="rgba(180,140,100,0.5)" rx="2"/>
+              <path d="M180,80 Q200,55 220,80" fill="rgba(180,140,100,0.5)"/>
+              <!-- Arch -->
+              <path d="M190,145 Q200,125 210,145" fill="rgba(120,90,60,0.3)"/>
+              <!-- Small domes -->
+              <circle cx="185" cy="78" r="5" fill="rgba(180,140,100,0.45)"/>
+              <circle cx="215" cy="78" r="5" fill="rgba(180,140,100,0.45)"/>
+              <circle cx="200" cy="58" r="6" fill="rgba(180,140,100,0.5)"/>
+            </g>
+            <!-- Background buildings (pastel) -->
+            <rect x="20" y="95" width="22" height="60" fill="rgba(200,180,160,0.3)" rx="2"/>
+            <rect x="48" y="80" width="18" height="75" fill="rgba(200,180,160,0.25)" rx="1"/>
+            <rect x="72" y="100" width="25" height="55" fill="rgba(200,180,160,0.2)" rx="2"/>
+            <rect x="102" y="88" width="16" height="67" fill="rgba(200,180,160,0.25)" rx="1"/>
+            <rect x="270" y="92" width="20" height="63" fill="rgba(200,180,160,0.25)" rx="2"/>
+            <rect x="296" y="82" width="28" height="73" fill="rgba(200,180,160,0.2)" rx="2"/>
+            <rect x="330" y="98" width="22" height="57" fill="rgba(200,180,160,0.25)" rx="2"/>
+            <rect x="358" y="86" width="25" height="69" fill="rgba(200,180,160,0.2)" rx="2"/>
+            <!-- Windows on buildings -->
+            <g opacity="0.4">
+              <rect x="52" y="88" width="3" height="3" fill="rgba(255,255,150,0.6)"/>
+              <rect x="52" y="95" width="3" height="3" fill="rgba(255,255,150,0.4)"/>
+              <rect x="106" y="95" width="3" height="3" fill="rgba(255,255,150,0.5)"/>
+              <rect x="300" y="90" width="3" height="3" fill="rgba(255,255,150,0.5)"/>
+              <rect x="300" y="98" width="3" height="3" fill="rgba(255,255,150,0.4)"/>
+              <rect x="335" y="105" width="3" height="3" fill="rgba(255,255,150,0.6)"/>
+            </g>
+            <!-- Palm trees (cute, like reference) -->
+            <g>
+              <!-- Left tree -->
+              <rect x="128" y="100" width="3" height="55" fill="rgba(90,65,40,0.5)" rx="1"/>
+              <ellipse cx="120" cy="95" rx="16" ry="10" fill="rgba(80,160,80,0.5)" transform="rotate(-25 120 95)"/>
+              <ellipse cx="140" cy="93" rx="14" ry="8" fill="rgba(90,170,90,0.45)" transform="rotate(20 140 93)"/>
+              <ellipse cx="130" cy="88" rx="12" ry="7" fill="rgba(70,150,70,0.4)" transform="rotate(-10 130 88)"/>
+              <!-- Right tree -->
+              <rect x="248" y="105" width="3" height="50" fill="rgba(90,65,40,0.5)" rx="1"/>
+              <ellipse cx="240" cy="100" rx="14" ry="9" fill="rgba(80,160,80,0.45)" transform="rotate(-20 240 100)"/>
+              <ellipse cx="258" cy="98" rx="13" ry="7" fill="rgba(90,170,90,0.4)" transform="rotate(25 258 98)"/>
+              <ellipse cx="250" cy="93" rx="11" ry="6" fill="rgba(70,150,70,0.4)" transform="rotate(-5 250 93)"/>
+            </g>
+
+            <!-- ======== GROUND / ROAD ======== -->
+            <rect x="0" y="215" width="400" height="85" fill="rgba(100,100,100,0.25)"/>
+            <rect x="0" y="213" width="400" height="4" fill="rgba(80,80,80,0.3)"/>
+            <!-- Road dashes -->
+            <g opacity="0.3">
+              <rect x="30" y="240" width="25" height="3" fill="rgba(255,255,255,0.5)" rx="1"/>
+              <rect x="85" y="240" width="25" height="3" fill="rgba(255,255,255,0.5)" rx="1"/>
+              <rect x="140" y="240" width="25" height="3" fill="rgba(255,255,255,0.5)" rx="1"/>
+              <rect x="195" y="240" width="25" height="3" fill="rgba(255,255,255,0.5)" rx="1"/>
+              <rect x="250" y="240" width="25" height="3" fill="rgba(255,255,255,0.5)" rx="1"/>
+              <rect x="305" y="240" width="25" height="3" fill="rgba(255,255,255,0.5)" rx="1"/>
+              <rect x="360" y="240" width="25" height="3" fill="rgba(255,255,255,0.5)" rx="1"/>
+            </g>
+            <!-- Sidewalk greenery -->
+            <ellipse cx="15" cy="215" rx="12" ry="8" fill="rgba(70,150,70,0.35)"/>
+            <ellipse cx="385" cy="215" rx="12" ry="8" fill="rgba(70,150,70,0.35)"/>
+
+            <!-- ======== KAALI-PEELI TAXI (cute, like reference) ======== -->
+            <g class="train-anim">
+              <!-- Car body (yellow) -->
+              <rect x="135" y="180" width="130" height="35" fill="#FFD54F" rx="6" stroke="#FBC02D" stroke-width="1"/>
+              <!-- Car roof/cabin -->
+              <path d="M165,180 Q170,158 195,155 L220,155 Q245,158 250,180" fill="#FFD54F" stroke="#FBC02D" stroke-width="1"/>
+              <!-- Black bottom half -->
+              <rect x="135" y="198" width="130" height="17" fill="#333" rx="0 0 6 6"/>
+              <rect x="135" y="198" width="130" height="5" fill="#222"/>
+              <!-- Windows -->
+              <rect x="172" y="162" width="22" height="16" fill="rgba(180,220,255,0.7)" rx="3"/>
+              <rect x="200" y="162" width="22" height="16" fill="rgba(180,220,255,0.7)" rx="3"/>
+              <rect x="228" y="162" width="18" height="16" fill="rgba(180,220,255,0.7)" rx="3"/>
+              <!-- Window divider -->
+              <line x1="195" y1="162" x2="195" y2="178" stroke="#FBC02D" stroke-width="1.5"/>
+              <line x1="223" y1="162" x2="223" y2="178" stroke="#FBC02D" stroke-width="1.5"/>
+              <!-- Headlight -->
+              <circle cx="265" cy="192" r="4" fill="rgba(255,255,200,0.8)" stroke="#FBC02D" stroke-width="1"/>
+              <circle cx="136" cy="192" r="4" fill="rgba(255,100,100,0.6)" stroke="#c62828" stroke-width="0.8"/>
+              <!-- Wheels -->
+              <circle cx="165" cy="215" r="12" fill="#555" stroke="#333" stroke-width="1.5"/>
+              <circle cx="165" cy="215" r="6" fill="#888"/>
+              <circle cx="165" cy="215" r="2" fill="#aaa"/>
+              <circle cx="240" cy="215" r="12" fill="#555" stroke="#333" stroke-width="1.5"/>
+              <circle cx="240" cy="215" r="6" fill="#888"/>
+              <circle cx="240" cy="215" r="2" fill="#aaa"/>
+              <!-- TAXI sign on roof -->
+              <rect x="188" y="148" width="30" height="10" fill="#fff" rx="3" stroke="#FBC02D" stroke-width="0.8"/>
+              <text x="203" y="156" text-anchor="middle" font-size="6" font-weight="bold" fill="#333" font-family="'Montserrat', sans-serif">TAXI</text>
+              <!-- Luggage on roof! (like the reference) -->
+              <rect x="175" y="138" width="18" height="12" fill="#4CAF50" rx="2" stroke="#388E3C" stroke-width="0.8"/>
+              <rect x="196" y="135" width="14" height="15" fill="#E57373" rx="2" stroke="#c62828" stroke-width="0.8"/>
+              <rect x="213" y="140" width="16" height="10" fill="#7986CB" rx="2" stroke="#5C6BC0" stroke-width="0.8"/>
+              <!-- Luggage straps -->
+              <line x1="172" y1="145" x2="232" y2="145" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
+              <!-- Driver silhouette -->
+              <circle cx="238" cy="168" r="5" fill="rgba(180,140,100,0.6)"/>
+            </g>
+
+            <!-- ======== CUTE DETAILS ======== -->
+            <!-- Vada Pav cart (right side, on sidewalk) -->
+            <g>
+              <rect x="320" y="192" width="40" height="22" fill="#8B4513" rx="3"/>
+              <rect x="318" y="189" width="44" height="5" fill="#A1887F" rx="2"/>
+              <!-- Vada Pavs -->
+              <circle cx="328" cy="187" r="5" fill="#FFB300"/><rect x="325" y="185" width="6" height="2.5" fill="#6D4C41" rx="1"/>
+              <circle cx="340" cy="187" r="5" fill="#FFB300"/><rect x="337" y="185" width="6" height="2.5" fill="#6D4C41" rx="1"/>
+              <circle cx="352" cy="187" r="5" fill="#FFB300"/><rect x="349" y="185" width="6" height="2.5" fill="#6D4C41" rx="1"/>
+              <!-- Steam rising -->
+              <path d="M333,180 Q335,174 333,168" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1" class="steam-anim"/>
+              <path d="M345,180 Q347,173 345,166" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1" class="steam-anim" style="animation-delay: 0.5s"/>
+              <!-- Wheels on cart -->
+              <circle cx="328" cy="214" r="4" fill="#555"/><circle cx="352" cy="214" r="4" fill="#555"/>
+              <!-- Price sign -->
+              <text x="340" y="230" text-anchor="middle" font-size="7" fill="#FFD700" font-weight="bold" font-family="'Montserrat', sans-serif">₹20</text>
+            </g>
+
+            <!-- Cutting chai (left side) -->
+            <g>
+              <rect x="30" y="194" width="22" height="16" fill="rgba(139,90,43,0.6)" rx="2"/>
+              <path d="M52,200 Q58,200 58,205 Q58,210 52,210" fill="none" stroke="rgba(139,90,43,0.5)" stroke-width="1.5"/>
+              <path d="M35,192 Q37,186 35,180" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" class="steam-anim" style="animation-delay: 0.3s"/>
+              <text x="41" y="225" text-anchor="middle" font-size="6" fill="rgba(255,215,0,0.6)" font-family="'Montserrat', sans-serif">☕ chai</text>
+            </g>
+
+            <!-- Marine Drive sparkle at bottom -->
+            <path d="M0,280 Q100,270 200,275 Q300,280 400,272" fill="none" stroke="rgba(255,215,0,0.2)" stroke-width="2" stroke-dasharray="4 3"/>
+            <text x="200" y="295" text-anchor="middle" font-size="8" fill="rgba(255,215,0,0.35)" font-style="italic" font-family="'Cormorant Garamond', serif">Marine Drive ✨</text>
+          </svg>
+        </div>
+        <div class="slide-content">
+          <div class="slide-label">The Beginning</div>
+          <div class="slide-title">Aamchi Mumbai</div>
+          <p class="slide-desc">
+            Two dreamers from the city of dreams. Local trains, monsoon rains,
+            vada pav at every corner, and the endless shimmer of Marine Drive at dusk.
+          </p>
+          <p class="slide-quote">Raised on Mumbai's chaos, charm, and cutting chai at Marine Drive!</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: GRAD SCHOOL -->
+      <div class="carousel-slide" data-slide="1">
+        <div class="slide-visual">
+          <div class="slide-bg roc"></div>
+          <div class="jabwemet-photos">
+            <img src="jabwemet1.jpg" alt="Jab We Met" class="active" style="object-position:center 25%;">
+            <img src="jabwemet2.jpg" alt="Jab We Met">
+            <img src="jabwemet3.jpeg" alt="Jab We Met" style="object-position:center 30%;">
+            <img src="jabwemet4.jpg" alt="Jab We Met" style="object-position:center 25%;">
+            <img src="jabwemet6.jpeg" alt="Jab We Met" style="object-position:center 25%;">
+          </div>
+        </div>
+        <div class="slide-content">
+          <div class="slide-label">Chapter One — BOM ✈️ ROC</div>
+          <div class="slide-title">Jab We Met</div>
+          <p class="slide-desc">
+            Two Mumbai kids crossed oceans to chase something bigger.
+            Grad school at RIT wasn’t just about degrees — it was about becoming.
+            From barista shifts to TA hours, learning to cook dal for the first time,
+            late-night study sessions that turned into deep conversations,
+            house parties in the snow, building bonds that would last forever,
+            and navigating a brand new world… we grew into the people
+            we were always meant to be. Strong. Independent. And, somewhere
+            in the middle of all of it — friends.
+          </p>
+          <p class="slide-quote">We came for a degree. We left with something we didn’t know we needed — each other.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: SFO → ATL -->
+      <div class="carousel-slide" data-slide="2">
+        <div class="slide-visual">
+          <div class="slide-bg ldr"></div>
+          <svg class="slide-scene" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Soft pastel sky -->
+            <rect x="0" y="0" width="400" height="300" fill="rgba(200,220,255,0.08)"/>
+            <!-- Fluffy clouds -->
+            <g opacity="0.25">
+              <ellipse cx="60" cy="30" rx="30" ry="12" fill="#b0d4f1"/>
+              <ellipse cx="45" cy="25" rx="18" ry="10" fill="#c5e0f5"/>
+              <ellipse cx="80" cy="28" rx="20" ry="9" fill="#c5e0f5"/>
+            </g>
+            <g opacity="0.2">
+              <ellipse cx="320" cy="40" rx="25" ry="10" fill="#b0d4f1"/>
+              <ellipse cx="340" cy="36" rx="18" ry="8" fill="#c5e0f5"/>
+            </g>
+            <g opacity="0.15">
+              <ellipse cx="200" cy="18" rx="22" ry="8" fill="#b0d4f1"/>
+            </g>
+
+            <!-- ========== GLOBE ========== -->
+            <g>
+              <!-- Globe body -->
+              <circle cx="200" cy="158" r="90" fill="#2a7ab5"/>
+              <circle cx="200" cy="158" r="90" fill="url(#globeShine)" opacity="0.4"/>
+              <!-- Ocean shimmer lines -->
+              <path d="M135,130 Q160,125 185,132" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+              <path d="M155,180 Q185,175 215,182" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+              <path d="M200,200 Q230,195 260,202" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+              <!-- Latitude lines (subtle) -->
+              <ellipse cx="200" cy="128" rx="82" ry="12" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+              <ellipse cx="200" cy="158" rx="90" ry="14" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+              <ellipse cx="200" cy="188" rx="82" ry="12" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+              <!-- USA land mass (stylized cute shape) -->
+              <path d="M130,128 Q138,115 165,112 Q185,110 200,115 Q220,110 245,115 Q265,118 275,130 Q280,145 270,158 Q255,168 235,170 Q215,175 195,170 Q175,175 155,168 Q138,162 130,148 Z" fill="#5dba5d" stroke="#4a9e4a" stroke-width="1.2" opacity="0.85"/>
+              <!-- Little trees on land -->
+              <circle cx="150" cy="135" r="4" fill="#3d8b3d" opacity="0.5"/>
+              <circle cx="180" cy="125" r="3" fill="#4a9e4a" opacity="0.4"/>
+              <circle cx="240" cy="130" r="3.5" fill="#3d8b3d" opacity="0.5"/>
+              <circle cx="260" cy="140" r="3" fill="#4a9e4a" opacity="0.4"/>
+            </g>
+
+            <!-- Globe highlight gradient -->
+            <defs>
+              <radialGradient id="globeShine" cx="35%" cy="35%">
+                <stop offset="0%" stop-color="white" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="white" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <!-- ========== SAN FRANCISCO (left on globe) ========== -->
+            <g>
+              <!-- GG Bridge (cute miniature) -->
+              <rect x="118" y="110" width="3" height="25" fill="#FF4500" rx="1"/>
+              <rect x="142" y="110" width="3" height="25" fill="#FF4500" rx="1"/>
+              <path d="M119,114 Q131,126 143,114" fill="none" stroke="#FF4500" stroke-width="2"/>
+              <rect x="116" y="132" width="30" height="2.5" fill="#d63c00" rx="1"/>
+              <!-- Suspenders -->
+              <line x1="125" y1="118" x2="125" y2="132" stroke="#FF4500" stroke-width="0.8" opacity="0.6"/>
+              <line x1="131" y1="122" x2="131" y2="132" stroke="#FF4500" stroke-width="0.8" opacity="0.6"/>
+              <line x1="137" y1="118" x2="137" y2="132" stroke="#FF4500" stroke-width="0.8" opacity="0.6"/>
+              <!-- SFO pin -->
+              <circle cx="131" cy="100" r="10" fill="#FF6B35" opacity="0.9"/>
+              <circle cx="131" cy="100" r="6.5" fill="white" opacity="0.9"/>
+              <text x="131" y="103" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#FF4500" font-family="'Montserrat', sans-serif">SFO</text>
+              <polygon points="126,109 131,118 136,109" fill="#FF6B35" opacity="0.9"/>
+            </g>
+
+            <!-- ========== ATLANTA (right on globe) ========== -->
+            <g>
+              <!-- ATL Skyline (cute blocky) -->
+              <rect x="254" y="120" width="6" height="18" fill="rgba(168,216,234,0.7)" rx="1.5"/>
+              <rect x="262" y="113" width="8" height="25" fill="rgba(168,216,234,0.8)" rx="1.5"/>
+              <rect x="272" y="117" width="7" height="21" fill="rgba(168,216,234,0.6)" rx="1.5"/>
+              <rect x="281" y="111" width="5" height="27" fill="rgba(168,216,234,0.7)" rx="1.5"/>
+              <!-- Windows on buildings -->
+              <rect x="264" y="117" width="2" height="2" fill="rgba(255,255,150,0.6)" rx="0.3"/>
+              <rect x="264" y="122" width="2" height="2" fill="rgba(255,255,150,0.4)" rx="0.3"/>
+              <rect x="274" y="121" width="2" height="2" fill="rgba(255,255,150,0.5)" rx="0.3"/>
+              <rect x="274" y="126" width="2" height="2" fill="rgba(255,255,150,0.6)" rx="0.3"/>
+              <!-- Cute peach -->
+              <circle cx="268" cy="102" r="11" fill="#FFAB91" stroke="#E57373" stroke-width="0.8"/>
+              <path d="M265,91 Q270,84 273,91" fill="none" stroke="#4CAF50" stroke-width="2.5"/>
+              <ellipse cx="275" cy="89" rx="4.5" ry="3" fill="#66BB6A" opacity="0.7"/>
+              <!-- Peach cheek blush & smile -->
+              <circle cx="264" cy="105" r="2.5" fill="rgba(255,150,150,0.35)"/>
+              <circle cx="272" cy="105" r="2.5" fill="rgba(255,150,150,0.35)"/>
+              <path d="M264,107 Q268,111 272,107" fill="none" stroke="rgba(180,80,80,0.3)" stroke-width="0.8"/>
+              <!-- ATL pin -->
+              <circle cx="268" cy="80" r="10" fill="#A8D8EA" opacity="0.9"/>
+              <circle cx="268" cy="80" r="6.5" fill="white" opacity="0.9"/>
+              <text x="268" y="83" text-anchor="middle" font-size="7.5" font-weight="bold" fill="#2196F3" font-family="'Montserrat', sans-serif">ATL</text>
+              <polygon points="263,89 268,98 273,89" fill="#A8D8EA" opacity="0.9"/>
+            </g>
+
+            <!-- ========== DOTTED FLIGHT ARC ========== -->
+            <path d="M131,100 Q200,30 268,80" fill="none" stroke="var(--gold)" stroke-width="2" stroke-dasharray="6 4" opacity="0.6"/>
+            <!-- Sparkle dots along arc -->
+            <circle cx="148" cy="78" r="2" fill="var(--gold)" opacity="0.3" class="sparkle-1"/>
+            <circle cx="168" cy="58" r="2.5" fill="var(--gold)" opacity="0.4" class="sparkle-2"/>
+            <circle cx="190" cy="42" r="3" fill="var(--gold)" opacity="0.5" class="sparkle-3"/>
+            <circle cx="215" cy="38" r="3" fill="var(--gold)" opacity="0.5" class="sparkle-1"/>
+            <circle cx="238" cy="48" r="2.5" fill="var(--gold)" opacity="0.4" class="sparkle-2"/>
+            <circle cx="255" cy="65" r="2" fill="var(--gold)" opacity="0.3" class="sparkle-3"/>
+
+            <!-- Animated plane on arc -->
+            <g class="flight-plane-anim" style="offset-path: path('M131,100 Q200,30 268,80');">
+              <text font-size="20">✈️</text>
+            </g>
+
+            <!-- Center heart -->
+            <g class="heart-pulse-anim">
+              <text x="200" y="30" text-anchor="middle" font-size="20">💕</text>
+            </g>
+
+            <!-- ========== BOTTOM ROW: Cute vignettes ========== -->
+            <!-- FaceTime phone -->
+            <g class="float-heart-2">
+              <rect x="60" y="225" width="34" height="50" fill="rgba(40,40,60,0.7)" rx="5" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <rect x="63" y="230" width="28" height="35" fill="rgba(100,200,255,0.15)" rx="2"/>
+              <!-- Cute face on screen -->
+              <circle cx="77" cy="243" r="7" fill="rgba(255,200,150,0.5)"/>
+              <circle cx="74" cy="241" r="1.2" fill="rgba(60,60,60,0.5)"/>
+              <circle cx="80" cy="241" r="1.2" fill="rgba(60,60,60,0.5)"/>
+              <path d="M74,246 Q77,249 80,246" fill="none" stroke="rgba(60,60,60,0.4)" stroke-width="0.8"/>
+              <!-- Heart bubbles -->
+              <text x="90" y="230" font-size="8" class="sparkle-1">❤️</text>
+              <text x="95" y="222" font-size="6" class="sparkle-2">💗</text>
+              <text x="77" y="285" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.5)" font-family="'Montserrat', sans-serif">FaceTime</text>
+            </g>
+
+            <!-- Boarding pass -->
+            <g>
+              <rect x="155" y="232" width="90" height="42" fill="rgba(255,250,240,0.12)" rx="6" stroke="rgba(201,168,76,0.3)" stroke-width="1"/>
+              <!-- Perforated line -->
+              <line x1="195" y1="232" x2="195" y2="274" stroke="rgba(201,168,76,0.2)" stroke-width="1" stroke-dasharray="3 3"/>
+              <!-- Left side -->
+              <text x="168" y="247" font-size="12" font-weight="bold" fill="#FF6B35" font-family="'Montserrat', sans-serif">SFO</text>
+              <text x="168" y="258" font-size="6" fill="rgba(255,255,255,0.4)">San Francisco</text>
+              <!-- Arrow -->
+              <text x="188" y="250" font-size="10" fill="var(--gold)">→</text>
+              <!-- Right side -->
+              <text x="205" y="247" font-size="12" font-weight="bold" fill="#A8D8EA" font-family="'Montserrat', sans-serif">ATL</text>
+              <text x="205" y="258" font-size="6" fill="rgba(255,255,255,0.4)">Atlanta</text>
+              <!-- Barcode -->
+              <g opacity="0.3">
+                <rect x="202" y="262" width="1.5" height="6" fill="var(--gold)"/>
+                <rect x="205" y="262" width="1" height="6" fill="var(--gold)"/>
+                <rect x="208" y="262" width="2" height="6" fill="var(--gold)"/>
+                <rect x="212" y="262" width="1" height="6" fill="var(--gold)"/>
+                <rect x="214.5" y="262" width="1.5" height="6" fill="var(--gold)"/>
+                <rect x="218" y="262" width="1" height="6" fill="var(--gold)"/>
+                <rect x="220.5" y="262" width="2" height="6" fill="var(--gold)"/>
+              </g>
+              <!-- Plane stamp -->
+              <text x="170" y="270" font-size="10">🛫</text>
+              <text x="200" y="288" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.5)" font-family="'Montserrat', sans-serif">Boarding Pass</text>
+            </g>
+
+            <!-- Airport hug -->
+            <g class="float-heart-1">
+              <circle cx="325" cy="252" r="22" fill="rgba(255,230,200,0.1)" stroke="rgba(255,200,150,0.15)" stroke-width="1"/>
+              <!-- Two cute stick figures hugging -->
+              <circle cx="318" cy="242" r="6" fill="rgba(255,180,100,0.5)"/>
+              <circle cx="332" cy="242" r="6" fill="rgba(200,150,255,0.5)"/>
+              <text x="325" y="250" text-anchor="middle" font-size="18">🤗</text>
+              <!-- Little hearts above -->
+              <text x="315" y="230" font-size="8" class="sparkle-1">💕</text>
+              <text x="335" y="226" font-size="6" class="sparkle-3">❤️</text>
+              <text x="325" y="288" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.5)" font-family="'Montserrat', sans-serif">Airport Hugs</text>
+            </g>
+
+            <!-- "2,100 miles" banner -->
+            <text x="200" y="14" text-anchor="middle" font-size="11" fill="var(--gold-light)" font-style="italic" font-family="'Cormorant Garamond', serif">2,100 miles of love</text>
+          </svg>
+        </div>
+        <div class="slide-content">
+          <div class="slide-label">Chapter Two — 2,100 Miles Apart</div>
+          <div class="slide-title">Across the Timezones</div>
+          <p class="slide-desc">
+            He moved to San Francisco. She moved to Atlanta. 2,100 miles apart —
+            but the distance only pulled them closer. Weekend FaceTime marathons
+            turned into cross-country flights. Pani Puri competitions at Chai Pani,
+            scooter rides down the Beltline, Coca-Cola tastings at World of Coke —
+            every visit felt like home away from home. Date nights that started
+            as “just catching up” turned into something neither could ignore.
+            Somewhere between the airport hugs and the goodbye tears,
+            they realized they were way more than friends — and finally said it out loud.
+          </p>
+          <p class="slide-quote">Two cities, three timezones, a hundred flights — and a love that refused to stay long-distance</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: SEATTLE -->
+      <div class="carousel-slide" data-slide="3">
+        <div class="slide-visual">
+          <div class="slide-bg sea"></div>
+          <div class="seattle-photos">
+            <img src="seattle-ferry-hero.jpeg" alt="Seattle Ferry" class="active" style="object-position:center 15%;">
+            <img src="seattle-ferry2.jpeg" alt="Seattle Ferry">
+            <img src="seattle-ferry3.jpeg" alt="Seattle Ferry" style="object-position:center 30%;">
+            <img src="seattle-ferry4.jpeg" alt="Seattle Ferry">
+          </div>
+        </div>
+        <div class="slide-content">
+          <div class="slide-label">Chapter Three — SEA</div>
+          <div class="slide-title">A Ferry Ride in Seattle</div>
+          <p class="slide-desc">
+            They met in the middle — Seattle. First date on a ferry, Space Needle behind them,
+            Mt. Rainier in the distance, the Great Wheel spinning.
+            Unforgettable — especially because Ash lost the car keys. 🔑😅
+          </p>
+          <p class="slide-quote">A ferry ride &amp; a Ferris wheel — first date. Legendary key-loss included.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 5: BAY AREA -->
+      <div class="carousel-slide" data-slide="4">
+        <div class="slide-visual">
+          <div class="slide-bg bay"></div>
+          <div class="everythingship-photos">
+            <img src="everythingship1.jpg" alt="The Everythingship" class="active">
+            <img src="everythingship2.jpg" alt="The Everythingship">
+            <img src="everythingship3.jpg" alt="The Everythingship">
+          </div>
+        </div>
+        <div class="slide-content">
+          <div class="slide-label">Together at Last — SFO</div>
+          <div class="slide-title">The Everythingship</div>
+          <p class="slide-desc">
+            No more boarding passes. No more countdowns.
+            Golden Gate sunrises, Twin Peaks sunsets, hikes through the Presidio,
+            concerts at Chase Center, beach picnics at Pacifica,
+            badminton on Tuesdays, and the kind of everyday magic
+            you only find when you’ve finally found your person.
+          </p>
+          <p class="slide-quote">"My heart's been borrowed and yours has been blue — all's well that ends well to end up with you."</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 6: CARMEL -->
+      <div class="carousel-slide" data-slide="5">
+        <div class="slide-visual">
+          <div class="slide-bg carmel"></div>
+          <div class="carmel-photos">
+            <img src="sunset-carmel1.jpeg" alt="Sunset at Carmel Beach" class="active">
+            <img src="sunset-carmel2.jpeg" alt="Sunset at Carmel Beach">
+            <img src="sunset-carmel3.jpeg" alt="Sunset at Carmel Beach">
+          </div>
+        </div>
+        <div class="slide-content">
+          <div class="slide-label">The Question</div>
+          <div class="slide-title">Sunset at Carmel Beach</div>
+          <p class="slide-desc">
+            A drive down Highway 1 — cliffs, cypress trees, and Carmel's white sand glowing gold.
+            A beach picnic, a golden sunset, waves whispering secrets, and one very nervous question.
+            She said yes before he finished asking.
+          </p>
+          <p class="slide-quote">"Yes. A thousand times yes." — The sky blushed. So did she.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 7: FOREVER -->
+      <div class="carousel-slide" data-slide="6">
+        <div class="slide-visual">
+          <div class="slide-bg forever"></div>
+          <svg class="slide-scene" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Warm golden radiance background -->
+            <circle cx="200" cy="150" r="140" fill="rgba(201,168,76,0.06)"/>
+            <circle cx="200" cy="150" r="90" fill="rgba(232,163,23,0.05)"/>
+
+            <!-- === MANDAP (ornate) === -->
+            <!-- Outer decorative arch -->
+            <path d="M80,65 Q200,5 320,65" fill="none" stroke="rgba(201,168,76,0.4)" stroke-width="3"/>
+            <path d="M90,60 Q200,12 310,60" fill="none" stroke="rgba(232,163,23,0.25)" stroke-width="2"/>
+            <!-- Pillars with carved detail -->
+            <rect x="85" y="55" width="12" height="195" fill="rgba(201,168,76,0.25)" rx="3"/>
+            <rect x="303" y="55" width="12" height="195" fill="rgba(201,168,76,0.25)" rx="3"/>
+            <!-- Pillar rings -->
+            <rect x="84" y="80" width="14" height="3" fill="rgba(201,168,76,0.3)" rx="1"/>
+            <rect x="84" y="120" width="14" height="3" fill="rgba(201,168,76,0.3)" rx="1"/>
+            <rect x="84" y="160" width="14" height="3" fill="rgba(201,168,76,0.3)" rx="1"/>
+            <rect x="302" y="80" width="14" height="3" fill="rgba(201,168,76,0.3)" rx="1"/>
+            <rect x="302" y="120" width="14" height="3" fill="rgba(201,168,76,0.3)" rx="1"/>
+            <rect x="302" y="160" width="14" height="3" fill="rgba(201,168,76,0.3)" rx="1"/>
+            <!-- Top beam -->
+            <rect x="85" y="55" width="230" height="8" fill="rgba(201,168,76,0.35)" rx="3"/>
+            <!-- Inner arch -->
+            <path d="M97,63 Q200,25 303,63" fill="none" stroke="rgba(255,215,0,0.3)" stroke-width="1.5"/>
+
+            <!-- === MARIGOLD GARLANDS === -->
+            <path d="M97,63 Q117,82 137,63" fill="none" stroke="#E8A317" stroke-width="3.5" opacity="0.7"/>
+            <path d="M137,63 Q157,82 177,63" fill="none" stroke="#FFB300" stroke-width="3.5" opacity="0.6"/>
+            <path d="M177,63 Q197,80 217,63" fill="none" stroke="#E8A317" stroke-width="3.5" opacity="0.7"/>
+            <path d="M217,63 Q237,82 257,63" fill="none" stroke="#FFB300" stroke-width="3.5" opacity="0.6"/>
+            <path d="M257,63 Q277,82 297,63" fill="none" stroke="#E8A317" stroke-width="3.5" opacity="0.7"/>
+            <!-- Side hanging garlands -->
+            <path d="M88,70 Q78,100 88,130" fill="none" stroke="#E8A317" stroke-width="2" opacity="0.5"/>
+            <path d="M312,70 Q322,100 312,130" fill="none" stroke="#E8A317" stroke-width="2" opacity="0.5"/>
+
+            <!-- === SACRED FIRE (Agni — detailed) === -->
+            <g class="fire-flicker">
+              <!-- Havan kund base -->
+              <rect x="175" y="215" width="50" height="10" fill="rgba(139,69,19,0.4)" rx="2"/>
+              <rect x="180" y="210" width="40" height="8" fill="rgba(160,82,45,0.35)" rx="2"/>
+              <!-- Fire layers -->
+              <path d="M188,215 Q190,190 200,172 Q210,190 212,215" fill="rgba(255,80,0,0.55)"/>
+              <path d="M192,215 Q196,192 200,180 Q204,192 208,215" fill="rgba(255,180,0,0.65)"/>
+              <path d="M196,215 Q199,198 200,188 Q201,198 204,215" fill="rgba(255,255,80,0.6)"/>
+              <!-- Sparks -->
+              <circle cx="195" cy="175" r="1.5" fill="rgba(255,200,0,0.8)" class="sparkle-1"/>
+              <circle cx="208" cy="170" r="1" fill="rgba(255,150,0,0.7)" class="sparkle-2"/>
+              <circle cx="200" cy="165" r="1.5" fill="rgba(255,255,100,0.6)" class="sparkle-3"/>
+            </g>
+
+            <!-- === BRIDE (left) — red lehenga === -->
+            <g class="couple-sway-1">
+              <!-- Head -->
+              <circle cx="160" cy="120" r="12" fill="rgba(255,210,180,0.65)"/>
+              <!-- Hair -->
+              <path d="M148,118 Q150,108 160,106 Q170,108 172,118" fill="rgba(30,30,30,0.4)"/>
+              <!-- Bindi -->
+              <circle cx="160" cy="115" r="1.5" fill="#E53935"/>
+              <!-- Maang tikka -->
+              <line x1="160" y1="106" x2="160" y2="113" stroke="#FFD700" stroke-width="1"/>
+              <circle cx="160" cy="113" r="2" fill="#FFD700"/>
+              <!-- Lehenga body -->
+              <path d="M148,132 Q150,138 145,195 L175,195 Q170,138 172,132 Z" fill="rgba(200,30,30,0.45)"/>
+              <!-- Lehenga flare -->
+              <path d="M145,195 Q140,200 135,210 L185,210 Q180,200 175,195 Z" fill="rgba(180,20,20,0.35)"/>
+              <!-- Gold border on lehenga -->
+              <path d="M135,210 L185,210" fill="none" stroke="rgba(255,215,0,0.5)" stroke-width="2"/>
+              <!-- Dupatta -->
+              <path d="M152,125 Q140,132 138,150 Q136,165 142,175" fill="none" stroke="rgba(255,100,100,0.4)" stroke-width="4"/>
+              <!-- Bangles -->
+              <circle cx="145" cy="155" r="3" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.6"/>
+              <circle cx="145" cy="160" r="3" fill="none" stroke="#E53935" stroke-width="1" opacity="0.5"/>
+              <!-- Necklace -->
+              <path d="M153,130 Q160,136 167,130" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+            </g>
+
+            <!-- === GROOM (right) — sherwani === -->
+            <g class="couple-sway-2">
+              <!-- Head -->
+              <circle cx="240" cy="120" r="12" fill="rgba(255,215,185,0.65)"/>
+              <!-- Pagdi / Safa -->
+              <path d="M228,115 Q232,100 240,97 Q248,100 252,115" fill="rgba(201,168,76,0.5)"/>
+              <path d="M230,108 Q240,103 250,108" fill="rgba(232,163,23,0.4)"/>
+              <!-- Kalgi on pagdi -->
+              <line x1="248" y1="100" x2="252" y2="92" stroke="#FFD700" stroke-width="1"/>
+              <circle cx="253" cy="91" r="2" fill="rgba(255,215,0,0.6)"/>
+              <!-- Sherwani body -->
+              <path d="M228,132 Q230,138 228,195 L252,195 Q250,138 252,132 Z" fill="rgba(201,168,76,0.35)"/>
+              <!-- Sherwani buttons -->
+              <circle cx="240" cy="145" r="1.5" fill="rgba(255,215,0,0.5)"/>
+              <circle cx="240" cy="155" r="1.5" fill="rgba(255,215,0,0.5)"/>
+              <circle cx="240" cy="165" r="1.5" fill="rgba(255,215,0,0.5)"/>
+              <!-- Churidar -->
+              <rect x="232" y="195" width="6" height="18" fill="rgba(201,168,76,0.25)" rx="2"/>
+              <rect x="244" y="195" width="6" height="18" fill="rgba(201,168,76,0.25)" rx="2"/>
+              <!-- Dupatta / stole -->
+              <path d="M250,130 Q258,140 256,160" fill="none" stroke="rgba(232,163,23,0.35)" stroke-width="3"/>
+              <!-- Necklace -->
+              <path d="M233,130 Q240,135 247,130" fill="none" stroke="#FFD700" stroke-width="1"/>
+            </g>
+
+            <!-- === JOINED HANDS with mehndi hint === -->
+            <line x1="172" y1="155" x2="228" y2="155" stroke="rgba(201,168,76,0.5)" stroke-width="2"/>
+            <path d="M178,153 Q182,148 186,153" fill="none" stroke="rgba(139,69,19,0.3)" stroke-width="1"/>
+
+            <!-- === VARMALAS (jai mala) === -->
+            <ellipse cx="160" cy="140" rx="10" ry="14" fill="none" stroke="#E8A317" stroke-width="2" stroke-dasharray="3 2" opacity="0.6"/>
+            <ellipse cx="240" cy="140" rx="10" ry="14" fill="none" stroke="#FF6B35" stroke-width="2" stroke-dasharray="3 2" opacity="0.6"/>
+
+            <!-- === DIYAS (row) === -->
+            <g>
+              <circle cx="110" cy="242" r="6" fill="rgba(255,165,0,0.4)"/>
+              <circle cx="110" cy="239" r="2.5" fill="rgba(255,255,0,0.7)" class="sparkle-1"/>
+              <circle cx="150" cy="246" r="5" fill="rgba(255,165,0,0.35)"/>
+              <circle cx="150" cy="243" r="2" fill="rgba(255,255,0,0.6)" class="sparkle-2"/>
+              <circle cx="250" cy="246" r="5" fill="rgba(255,165,0,0.35)"/>
+              <circle cx="250" cy="243" r="2" fill="rgba(255,255,0,0.6)" class="sparkle-3"/>
+              <circle cx="290" cy="242" r="6" fill="rgba(255,165,0,0.4)"/>
+              <circle cx="290" cy="239" r="2.5" fill="rgba(255,255,0,0.7)" class="sparkle-1"/>
+            </g>
+
+            <!-- === FLOATING ELEMENTS === -->
+            <!-- Rose petals -->
+            <text x="120" y="90" font-size="12" class="float-heart-1">🌹</text>
+            <text x="275" y="85" font-size="10" class="float-heart-2">🌹</text>
+            <text x="130" y="175" font-size="8" class="sparkle-3">🌸</text>
+            <text x="265" y="180" font-size="8" class="sparkle-1">🌸</text>
+            <!-- Hearts -->
+            <text x="140" y="100" font-size="16" class="float-heart-3">❤️</text>
+            <text x="250" y="95" font-size="14" class="float-heart-1">❤️</text>
+            <text x="195" y="85" font-size="20" class="float-heart-2">💕</text>
+            <!-- Sparkles -->
+            <text x="115" y="45" font-size="14" class="sparkle-1">✨</text>
+            <text x="280" y="40" font-size="12" class="sparkle-2">✨</text>
+            <text x="200" y="18" font-size="16" class="sparkle-3">✨</text>
+            <text x="75" y="65" font-size="10" class="sparkle-2">✨</text>
+            <text x="325" y="60" font-size="10" class="sparkle-1">✨</text>
+
+            <!-- Rangoli pattern on floor -->
+            <circle cx="200" cy="255" r="18" fill="none" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+            <circle cx="200" cy="255" r="12" fill="none" stroke="rgba(232,163,23,0.15)" stroke-width="1"/>
+            <circle cx="200" cy="255" r="6" fill="rgba(255,165,0,0.15)"/>
+            <!-- Rangoli petals -->
+            <ellipse cx="200" cy="237" rx="3" ry="6" fill="rgba(255,100,100,0.15)"/>
+            <ellipse cx="200" cy="273" rx="3" ry="6" fill="rgba(255,100,100,0.15)"/>
+            <ellipse cx="182" cy="255" rx="6" ry="3" fill="rgba(255,165,0,0.15)"/>
+            <ellipse cx="218" cy="255" rx="6" ry="3" fill="rgba(255,165,0,0.15)"/>
+
+            <!-- Together forever text -->
+            <text x="200" y="290" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="13" fill="rgba(201,168,76,0.8)" font-style="italic" class="yes-anim">Together, forever ∞</text>
+          </svg>
+        </div>
+        <div class="slide-content">
+          <div class="slide-label">August 16, 2026</div>
+          <div class="slide-title">Adventure of a Lifetime</div>
+          <p class="slide-desc">
+            And now, surrounded by the people we love most — family from Mumbai to New York,
+            friends from Rochester to the Bay — we begin the most beautiful chapter of all.
+          </p>
+          <p class="slide-quote">“The best love stories take the scenic route. Some people are worth crossing oceans for.”</p>
+        </div>
+      </div>
+
+    </div><!-- /carousel-track -->
+
+    <!-- Dot navigation with labels -->
+    <div class="carousel-dots" id="carouselDots">
+      <div class="dot-wrapper"><button class="carousel-dot active" data-dot="0"></button><span class="dot-label">Mumbai</span></div>
+      <div class="dot-wrapper"><button class="carousel-dot" data-dot="1"></button><span class="dot-label">Grad School</span></div>
+      <div class="dot-wrapper"><button class="carousel-dot" data-dot="2"></button><span class="dot-label">Across TZ</span></div>
+      <div class="dot-wrapper"><button class="carousel-dot" data-dot="3"></button><span class="dot-label">Seattle</span></div>
+      <div class="dot-wrapper"><button class="carousel-dot" data-dot="4"></button><span class="dot-label">Bay Area</span></div>
+      <div class="dot-wrapper"><button class="carousel-dot" data-dot="5"></button><span class="dot-label">Carmel</span></div>
+      <div class="dot-wrapper"><button class="carousel-dot" data-dot="6"></button><span class="dot-label">Forever</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WEDDING DETAILS
+     ============================================ -->
+<section class="details-section" id="details">
+  <div class="section-header" style="padding-top: 0;">
+    <div class="section-eyebrow reveal">Wedding Celebration</div>
+    <h2 class="section-title reveal">Request the honour of your presence</h2>
+  </div>
+
+  <div class="details-grid reveal">
+    <div class="detail-card">
+      <div class="detail-icon">📅</div>
+      <div class="detail-label">Date</div>
+      <div class="detail-value">Sunday<br>August 16, 2026</div>
+    </div>
+    <div class="detail-card">
+      <div class="detail-icon">🕐</div>
+      <div class="detail-label">Schedule</div>
+      <div class="detail-value">Ceremony at 12:30</div>
+      <div class="detail-sub">Lunch · DJ · Desserts</div>
+      <div class="detail-value" style="margin-top: 8px;">Sip &amp; Soirée</div>
+      <div class="detail-sub" style="font-size: 0.85em; margin-top: 4px;">✨ the night is young…</div>
+    </div>
+    <div class="detail-card">
+      <div class="detail-icon">📍</div>
+      <div class="detail-label">Venue</div>
+      <div class="detail-value">Château Mt Eden</div>
+      <div class="detail-sub">22030 Mt Eden Rd<br>Saratoga, CA 95070</div>
+    </div>
+  </div>
+
+  <div class="events-timeline reveal">
+    <div class="event-item">
+      <div class="event-time">12:30 PM</div>
+      <div class="event-name">Wedding Ceremony</div>
+      <div class="event-desc">Two less fish in the sea 🐟🐟</div>
+    </div>
+    <div class="event-item">
+      <div class="event-time">1:30 PM</div>
+      <div class="event-name">Lunch</div>
+      <div class="event-desc">Feast, toast &amp; celebrate</div>
+    </div>
+    <div class="event-item">
+      <div class="event-time">3:00 PM</div>
+      <div class="event-name">Sip &amp; Soirée</div>
+      <div class="event-desc">DJ, dancing &amp; desserts — the night is young ✨</div>
+    </div>
+  </div>
+
+  <div class="dresscode reveal">
+    <div class="dresscode-title">Dress Code</div>
+    <div class="dresscode-text">Festive &amp; Elegant</div>
+    <div class="dresscode-sub">Bring your best moves and your dancing shoes</div>
+    <div style="display: flex; justify-content: center; gap: 48px; margin-top: 24px; flex-wrap: wrap;">
+      <div style="text-align: center;">
+        <div style="font-size: 2em; margin-bottom: 8px;">🧔‍♂️</div>
+        <div style="font-family: var(--font-sans); font-size: 0.65em; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px;">Men</div>
+        <div style="font-family: var(--font-body); font-size: 0.9em; color: var(--gold-light);">Suit &amp; Tie&nbsp; 👔</div>
+        <div style="font-family: var(--font-body); font-size: 0.85em; color: var(--gold-light); opacity: 0.7; margin-top: 2px;">or Sherwani / Kurta&nbsp; 🧕</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 2em; margin-bottom: 8px;">💃</div>
+        <div style="font-family: var(--font-sans); font-size: 0.65em; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px;">Women</div>
+        <div style="font-family: var(--font-body); font-size: 0.9em; color: var(--gold-light);">Cocktail Dress&nbsp; 👗</div>
+        <div style="font-family: var(--font-body); font-size: 0.85em; color: var(--gold-light); opacity: 0.7; margin-top: 2px;">or Saree / Lehenga&nbsp; 🧵</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="venue-map reveal">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.5!2d-122.058!3d37.255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb4a4e1f71bdf%3A0x6671d7fa22c4a931!2sCh%C3%A2teau%20Mt%20Eden!5e0!3m2!1sen!2sus"
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <div class="map-buttons">
+      <a href="https://www.google.com/maps/dir/?api=1&destination=22030+Mt+Eden+Rd,+Saratoga,+CA+95070" target="_blank" class="map-btn">Google Maps</a>
+      <a href="https://maps.apple.com/?daddr=22030+Mt+Eden+Rd,+Saratoga,+CA+95070" target="_blank" class="map-btn">Apple Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     RSVP FORM
+     ============================================ -->
+<section class="rsvp-section" id="rsvp">
+  <div class="section-eyebrow reveal">RSVP</div>
+  <h2 class="section-title reveal">Will you be there?</h2>
+  <p class="section-subtitle reveal">We can't wait to celebrate with you. Please respond by July 15, 2026.</p>
+
+  <div class="rsvp-form reveal" id="rsvpFormContainer">
+    <form id="rsvpForm" onsubmit="return handleRSVP(event)">
+      <!-- Name -->
+      <div class="form-row-half">
+        <div>
+          <label class="form-label" for="firstName">First Name *</label>
+          <input class="form-input" type="text" id="firstName" name="firstName" required autocomplete="given-name">
+        </div>
+        <div>
+          <label class="form-label" for="lastName">Last Name *</label>
+          <input class="form-input" type="text" id="lastName" name="lastName" required autocomplete="family-name">
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-row">
+        <label class="form-label" for="email">Email *</label>
+        <input class="form-input" type="email" id="email" name="email" required autocomplete="email">
+      </div>
+
+      <!-- Attending -->
+      <div class="form-row">
+        <label class="form-label">Will you attend? *</label>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="attending" value="yes" required onchange="togglePlusOne()"> Joyfully Accepts
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="attending" value="no" onchange="togglePlusOne()"> Regretfully Declines
+          </label>
+        </div>
+      </div>
+
+      <!-- Number of Guests -->
+      <div class="form-row">
+        <label class="form-label" for="numGuests">Number of Guests (including yourself) *</label>
+        <input class="form-input" type="number" id="numGuests" name="numGuests" min="1" max="10" value="1" required style="max-width: 120px;">
+      </div>
+
+      <!-- Dietary Restrictions -->
+      <div class="form-row">
+        <label class="form-label">Dietary Preference *</label>
+        <div class="radio-group" style="flex-wrap: wrap;">
+          <label class="radio-option">
+            <input type="radio" name="dietary" value="veg" required> 🌱 Vegetarian
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="dietary" value="nonveg"> 🍗 Non-Vegetarian
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="dietary" value="nut-allergy"> 🥜 Nut Allergy
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="dietary" value="other" onchange="toggleDietaryOther()"> Other
+          </label>
+        </div>
+        <div class="plus-one-fields" id="dietaryOtherWrap">
+          <label class="form-label" for="dietaryOther" style="margin-top: 8px;">Please specify</label>
+          <input class="form-input" type="text" id="dietaryOther" name="dietaryOther" placeholder="e.g. vegan, gluten-free, halal">
+        </div>
+      </div>
+
+      <!-- Drink Preference -->
+      <div class="form-row">
+        <label class="form-label">Sip of Choice 🍸</label>
+        <div class="radio-group" style="flex-wrap: wrap;">
+          <label class="radio-option">
+            <input type="radio" name="drinkPref" value="cocktail"> 🍹 Cocktail
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="drinkPref" value="mocktail"> 🧃 Mocktail
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="drinkPref" value="both"> Both — surprise me!
+          </label>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div class="form-row">
+        <label class="form-label" for="message">A Note for the Couple (optional)</label>
+        <textarea class="form-textarea" id="message" name="message" placeholder="Share your wishes, song requests, or just say hi!"></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">Send RSVP</button>
+    </form>
+
+    <!-- Success State -->
+    <div class="rsvp-success" id="rsvpSuccess">
+      <div class="check-icon">🎉</div>
+      <h3>Thank You!</h3>
+      <p>Your RSVP has been received. We can't wait to celebrate with you!</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     REGISTRY
+     ============================================ -->
+<section class="link-section alt" id="registry">
+  <div class="section-eyebrow reveal">Registry</div>
+  <h2 class="section-title reveal">Gifts &amp; Registry</h2>
+  <p class="section-subtitle reveal">Your presence is the greatest gift of all.<br>But if you insist…</p>
+  <a href="https://docs.google.com/spreadsheets/d/15tmm-xfZCG-fJAewSInzXVF7edUgT_j5WjVj9_ZU4Yk/edit?gid=0#gid=0" class="cta-btn reveal" target="_blank">View Registry</a>
+</section>
+
+<!-- ============================================
+     GALLERY
+     ============================================ -->
+<section class="gallery-section" id="gallery">
+  <div class="section-header">
+    <div class="section-eyebrow reveal">Gallery</div>
+    <h2 class="section-title reveal">Magic Moments</h2>
+    <p class="section-subtitle reveal" style="font-family: var(--font-body); font-size: 1.05em; font-style: italic; color: #8B6914; margin-top: 8px;">It's not legendary unless your friends are there to see it</p>
+  </div>
+  <div class="gallery-grid reveal">
+    <div class="gallery-item"><img src="MM1.jpg" alt="Magic Moment"></div>
+    <div class="gallery-item"><img src="MM2.jpeg" alt="Magic Moment"></div>
+    <div class="gallery-item"><img src="MM3.jpeg" alt="Magic Moment"></div>
+    <div class="gallery-item"><img src="MM4.jpeg" alt="Magic Moment"></div>
+    <div class="gallery-item"><img src="MM5.jpg" alt="Magic Moment"></div>
+    <div class="gallery-item"><img src="MM6.jpg" alt="Magic Moment" style="object-position:center 30%;"></div>
+    <div class="gallery-item"><img src="MM7.jpg" alt="Magic Moment"></div>
+    <div class="gallery-item"><img src="MM8.jpg" alt="Magic Moment"></div>
+    <div class="gallery-item"><video src="MM9.mp4" muted playsinline preload="metadata" style="pointer-events:none;object-position:center 30%;" onloadeddata="this.currentTime=0;this.pause();"></video></div>
+    <div class="gallery-item"><img src="MM10.jpg" alt="Magic Moment"></div>
+    <div class="gallery-item"><img src="MM11.jpeg" alt="Magic Moment" style="object-position:center 55%;"></div>
+    <div class="gallery-item"><img src="MM12.jpg" alt="Magic Moment"></div>
+  </div>
+</section>
+
+<!-- ============================================
+     TRAVEL
+     ============================================ -->
+<section class="travel-section" id="travel">
+  <div class="section-header" style="padding-top: 0;">
+    <div class="section-eyebrow reveal">Travel &amp; Stay</div>
+    <h2 class="section-title reveal">Getting Here</h2>
+    <p class="section-subtitle reveal">Everything you need to plan your trip</p>
+  </div>
+  <div class="travel-grid">
+    <div class="travel-card reveal">
+      <div class="travel-icon">✈️</div>
+      <div class="travel-title">Airports</div>
+      <p class="travel-text">
+        <strong>SJC</strong> — San José Mineta (~20 min)<br>
+        <strong>SFO</strong> — San Francisco Intl (~45 min)<br>
+        <strong>OAK</strong> — Oakland Intl (~45 min)
+      </p>
+    </div>
+    <div class="travel-card reveal reveal-delay-1">
+      <div class="travel-icon">🏨</div>
+      <div class="travel-title">Hotels</div>
+      <p class="travel-text">
+        <strong>Saratoga area:</strong><br>
+        <a href="https://www.innatsar.com/" target="_blank" style="color:var(--gold);">The Inn at Saratoga</a><br>
+        <a href="https://www.tollhousehotel.com/" target="_blank" style="color:var(--gold);">Toll House Hotel, Los Gatos</a><br>
+        <a href="https://www.hotellosgatosca.com/" target="_blank" style="color:var(--gold);">Hotel Los Gatos</a><br>
+        <a href="https://www.hilton.com/en/hotels/sjcfghx-hampton-suites-los-gatos/" target="_blank" style="color:var(--gold);">Hampton Inn Los Gatos</a><br>
+        <a href="https://www.marriott.com/hotels/travel/sjcca-courtyard-san-jose-campbell/" target="_blank" style="color:var(--gold);">Courtyard by Marriott, Campbell</a><br><br>
+        <strong>San Mateo area:</strong><br>
+        <a href="https://www.marriott.com/hotels/travel/sfosm-san-mateo-marriott-san-francisco-airport/" target="_blank" style="color:var(--gold);">San Mateo Marriott</a><br>
+        <a href="https://www.marriott.com/hotels/travel/sfori-residence-inn-san-mateo/" target="_blank" style="color:var(--gold);">Residence Inn San Mateo</a><br>
+        <a href="https://www.marriott.com/hotels/travel/sfoem-element-san-mateo/" target="_blank" style="color:var(--gold);">Element by Westin, San Mateo</a><br>
+        <a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/san-mateo/sfosm/" target="_blank" style="color:var(--gold);">Holiday Inn Express, San Mateo</a><br>
+        <a href="https://www.hyatt.com/hyatt-place/en-US/sfoze-hyatt-place-san-mateo/" target="_blank" style="color:var(--gold);">Hyatt Place San Mateo</a>
+      </p>
+    </div>
+    <div class="travel-card reveal reveal-delay-2">
+      <div class="travel-icon">🍽️</div>
+      <div class="travel-title">Things to Do</div>
+      <p class="travel-text">
+        Santana Row — shopping &amp; dining<br>
+        Golden Gate &amp; Hawk Hill views<br>
+        Twin Peaks sunset<br>
+        Presidio &amp; Palace of Fine Arts
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     DISTANCE
+     ============================================ -->
+<section class="distance-section">
+  <h2 class="section-title reveal">You Are</h2>
+  <div class="distance-value reveal" id="distance-val">—</div>
+  <div class="distance-sub reveal" id="distance-sub">Calculating the distance love must travel…</div>
+  <div class="map-buttons reveal" style="margin-top: 24px;">
+    <a href="https://www.google.com/maps/dir/?api=1&destination=22030+Mt+Eden+Rd,+Saratoga,+CA+95070" target="_blank" class="map-btn" style="border-color: var(--gold-light); color: var(--gold-light);">Get Directions</a>
+  </div>
+</section>
+
+<!-- ============================================
+     MUSIC PLAYER (floating)
+     ============================================ -->
+<div class="music-player" id="musicPlayer">
+  <button class="music-btn" id="musicBtn" aria-label="Toggle Music" title="Play/Pause Music">
+    <span class="music-icon" id="musicIcon">♪</span>
+    <span class="music-bars" id="musicBars">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </span>
+  </button>
+  <span class="music-label" id="musicLabel">Play Music</span>
+</div>
+<audio id="bgMusic" loop preload="none">
+  <!-- Replace src with your preferred instrumental MP3 (Harry Styles - Satellite instrumental / Adore You piano) -->
+  <!-- Example: local file or hosted URL -->
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="footer-monogram">A &amp; K</div>
+  <p class="footer-message">
+    Your presence at our wedding is the greatest gift of all.<br>
+    We look forward to sharing our new beginning with you.
+  </p>
+  <p class="footer-message" style="font-size: 1.4em; color: var(--gold);">
+    WITH LOVE,<br>AASHRAI &amp; KETAKI
+  </p>
+  <p class="footer-copy">&copy; 2026 — Made with ❤️</p>
+</footer>
+
+<!-- ============================================
+     JAVASCRIPT
+     ============================================ -->
+<script>
+// ---- STARS with shimmer + glow + shooting stars ----
+(function() {
+  const c = document.getElementById('stars');
+  // Regular stars with shimmer glow
+  for (let i = 0; i < 120; i++) {
+    const s = document.createElement('div');
+    s.className = 'star' + (Math.random() > 0.7 ? ' bright' : '');
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    const dur = 2 + Math.random() * 4;
+    s.style.setProperty('--dur', dur + 's');
+    s.style.animationDelay = Math.random() * 4 + 's';
+    const size = 1 + Math.random() * 2.5;
+    s.style.width = size + 'px';
+    s.style.height = size + 'px';
+    s.style.background = Math.random() > 0.5 ? '#E8D5A0' : '#FFFFFF';
+    c.appendChild(s);
+  }
+  // Shooting stars
+  for (let i = 0; i < 3; i++) {
+    const ss = document.createElement('div');
+    ss.className = 'shooting-star';
+    ss.style.left = (10 + Math.random() * 60) + '%';
+    ss.style.top = (5 + Math.random() * 40) + '%';
+    ss.style.setProperty('--shoot-dur', (6 + Math.random() * 8) + 's');
+    ss.style.animationDelay = (i * 5 + Math.random() * 4) + 's';
+    c.appendChild(ss);
+  }
+})();
+
+// ---- NAV SCROLL ----
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
+
+// ---- NAV TOGGLE (MOBILE) ----
+document.getElementById('navToggle').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+});
+
+// ---- COUNTDOWN ----
+(function() {
+  const target = new Date('2026-08-16T00:00:00-07:00').getTime();
+  function tick() {
+    const diff = Math.max(0, target - Date.now());
+    document.getElementById('cd-days').textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
+    document.getElementById('cd-hours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+    document.getElementById('cd-mins').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+    document.getElementById('cd-secs').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+// ---- SCROLL REVEAL ----
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ---- CAROUSEL ----
+(function() {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const total = slides.length;
+  let current = 0;
+  let autoTimer = null;
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = ((n % total) + total) % total;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(() => goTo(current + 1), 12000);
+  }
+  function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
+
+  document.getElementById('carouselPrev').addEventListener('click', () => { goTo(current - 1); startAuto(); });
+  document.getElementById('carouselNext').addEventListener('click', () => { goTo(current + 1); startAuto(); });
+  dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.dot); startAuto(); }));
+
+  // Keyboard nav
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { goTo(current - 1); startAuto(); }
+    if (e.key === 'ArrowRight') { goTo(current + 1); startAuto(); }
+  });
+
+  // Touch swipe
+  let touchX = 0;
+  const track = document.getElementById('carouselTrack');
+  track.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) {
+      goTo(current + (dx < 0 ? 1 : -1));
+      startAuto();
+    }
+  }, { passive: true });
+
+  // Reset to slide 0 when story section scrolls into view
+  const storySection = document.getElementById('story');
+  const storyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { goTo(0); startAuto(); }
+    });
+  }, { threshold: 0.3 });
+  storyObserver.observe(storySection);
+
+  startAuto();
+})();
+
+// ---- RSVP FORM ----
+function toggleDietaryOther() {
+  const otherChecked = document.querySelector('input[name="dietary"][value="other"]')?.checked;
+  document.getElementById('dietaryOtherWrap').classList.toggle('show', otherChecked);
+}
+// Also hide when another dietary radio is picked
+document.querySelectorAll('input[name="dietary"]').forEach(r => {
+  r.addEventListener('change', toggleDietaryOther);
+});
+
+// Google Sheets integration via Google Apps Script web app
+// SETUP: 1) Create a Google Sheet  2) Extensions > Apps Script  3) Paste the script below  4) Deploy as web app  5) Put URL here
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyTrRFlH0_8RfSiDCg32KObaJhc_4yh3Zjv7mWZdIBlNdZlePrrHyxYX1mAJm-BEuD5/exec';
+
+function handleRSVP(e) {
+  e.preventDefault();
+  const form = document.getElementById('rsvpForm');
+  const btn = form.querySelector('.form-submit');
+
+  // Prevent double submission
+  if (btn.disabled) return false;
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  const data = new FormData(form);
+  const obj = {};
+  data.forEach((v, k) => obj[k] = v);
+  obj.timestamp = new Date().toISOString();
+
+  // Store in localStorage as backup
+  const rsvps = JSON.parse(localStorage.getItem('wedding_rsvps') || '[]');
+  rsvps.push(obj);
+  localStorage.setItem('wedding_rsvps', JSON.stringify(rsvps));
+
+  // Send to Google Sheets
+  if (GOOGLE_SHEET_URL) {
+    fetch(GOOGLE_SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(obj)
+    }).then(() => {
+      showRSVPSuccess(form, btn);
+    }).catch(err => {
+      console.warn('Google Sheets error (data saved locally):', err);
+      showRSVPSuccess(form, btn);
+    });
+  } else {
+    showRSVPSuccess(form, btn);
+  }
+
+  return false;
+}
+
+function showRSVPSuccess(form, btn) {
+  form.style.display = 'none';
+  document.getElementById('rsvpSuccess').style.display = 'block';
+  btn.disabled = false;
+  btn.textContent = 'Send RSVP';
+}
+
+// ---- DISTANCE ----
+(function() {
+  const venLat = 37.257, venLng = -122.063;
+  function haversine(lat1, lon1, lat2, lon2) {
+    const R = 3958.8;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLon/2)**2;
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  }
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(pos => {
+      const d = haversine(pos.coords.latitude, pos.coords.longitude, venLat, venLng);
+      const el = document.getElementById('distance-val');
+      const sub = document.getElementById('distance-sub');
+      if (d < 5) { el.textContent = 'Right Here!'; sub.textContent = "You're practically at the venue already 🎉"; }
+      else { el.textContent = Math.round(d).toLocaleString() + ' miles'; sub.textContent = 'away — but worth every mile ❤️'; }
+    }, () => {
+      document.getElementById('distance-val').textContent = '∞';
+      document.getElementById('distance-sub').textContent = 'Enable location to see your distance to us';
+    });
+  }
+})();
+// ---- MUSIC PLAYER ----
+(function() {
+  const btn = document.getElementById('musicBtn');
+  const audio = document.getElementById('bgMusic');
+  const label = document.getElementById('musicLabel');
+  let playing = false;
+
+  btn.addEventListener('click', () => {
+    if (playing) {
+      audio.pause();
+      btn.classList.remove('playing');
+      label.textContent = 'Play Music';
+      label.classList.remove('hidden');
+    } else {
+      audio.volume = 0.35;
+      audio.play().catch(() => {});
+      btn.classList.add('playing');
+      label.textContent = 'Now Playing';
+      setTimeout(() => label.classList.add('hidden'), 3000);
+    }
+    playing = !playing;
+  });
+
+  // Hide label after 5s on load
+  setTimeout(() => { if (!playing) label.classList.add('hidden'); }, 5000);
+})();
+
+// Photo slideshows (Seattle + Carmel)
+document.querySelectorAll('.seattle-photos, .carmel-photos, .everythingship-photos, .jabwemet-photos').forEach(container => {
+  const imgs = container.querySelectorAll('img');
+  if (!imgs.length) return;
+  let idx = 0;
+  setInterval(() => {
+    imgs[idx].classList.remove('active');
+    idx = (idx + 1) % imgs.length;
+    imgs[idx].classList.add('active');
+  }, 3000);
+});
+</script>
+</body>
+</html>
