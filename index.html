@@ -831,10 +831,32 @@ a:hover { color: var(--marigold); }
   .rsvp-form { padding: 28px 20px; }
 }
 
-/* Mobile performance: pause heavy SVG animations */
+/* Mobile performance: aggressively simplify for phone browsers */
 @media (max-width: 768px) {
-  .slide:not(.active) * { animation-play-state: paused !important; }
-  .petals-container { display: none; }
+  /* Hide all complex inline SVGs — they have dozens of animated elements */
+  .slide-scene { display: none !important; }
+  /* Hide petals entirely */
+  .petals-container { display: none !important; }
+  /* Kill ALL infinite CSS animations site-wide on mobile */
+  *, *::before, *::after {
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+  }
+  /* Allow countdown numbers to still update (they use JS, not CSS animations) */
+  /* Re-enable opacity transition for slideshow photos */
+  .seattle-photos img, .carmel-photos img, .everythingship-photos img, .jabwemet-photos img {
+    animation: none !important;
+    transition: opacity 0.8s ease !important;
+  }
+  /* Keep reveal fade-in working (one-shot, not infinite) */
+  .reveal.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 0.6s, transform 0.6s !important;
+  }
+  /* Reduce star count visually */
+  .stars .star:nth-child(n+20) { display: none !important; }
+  .shooting-star { display: none !important; }
 }
 
 /* ============================================
