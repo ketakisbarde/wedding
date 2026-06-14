@@ -519,8 +519,11 @@ a:hover { color: var(--marigold); }
   color: var(--gold-light); margin-top: 8px;
 }
 .venue-map { max-width: 900px; margin: 48px auto 0; text-align: center; }
-.venue-map iframe {
-  width: 100%; height: 350px; border: none; border-radius: 12px;
+.venue-map .map-wrap {
+  position: relative; width: 100%; height: 350px; border-radius: 12px; overflow: hidden;
+}
+.venue-map .map-wrap iframe {
+  width: 100%; height: 400px; border: none;
   filter: grayscale(0.3) contrast(1.1);
   pointer-events: none;
 }
@@ -1710,10 +1713,12 @@ a:hover { color: var(--marigold); }
   </div>
 
   <div class="venue-map reveal">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.5!2d-122.0602!3d37.2557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb4a4e1f71bdf%3A0x6671d7fa22c4a931!2sCh%C3%A2teau%20Mt%20Eden!5e0!3m2!1sen!2sus!4v1"
-      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.5!2d-122.0602!3d37.2557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb4a4e1f71bdf%3A0x6671d7fa22c4a931!2sCh%C3%A2teau%20Mt%20Eden!5e0!3m2!1sen!2sus!4v1"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
     <div class="map-buttons">
       <a href="https://www.google.com/maps/dir/?api=1&destination=22030+Mt+Eden+Rd,+Saratoga,+CA+95070" target="_blank" class="map-btn">Google Maps</a>
       <a href="https://maps.apple.com/?daddr=22030+Mt+Eden+Rd,+Saratoga,+CA+95070" target="_blank" class="map-btn">Apple Maps</a>
@@ -1769,26 +1774,23 @@ a:hover { color: var(--marigold); }
       </div>
 
       <!-- Dietary Restrictions -->
+      <!-- Diet Preference -->
       <div class="form-row">
-        <label class="form-label">Dietary Preference *</label>
+        <label class="form-label">Diet Preference *</label>
         <div class="radio-group" style="flex-wrap: wrap;">
           <label class="radio-option">
-            <input type="radio" name="dietary" value="veg" required> 🌱 Vegetarian
+            <input type="radio" name="dietary" value="veg" required> 🌱 Veg
           </label>
           <label class="radio-option">
-            <input type="radio" name="dietary" value="nonveg"> 🍗 Non-Vegetarian
-          </label>
-          <label class="radio-option">
-            <input type="radio" name="dietary" value="nut-allergy"> 🥜 Nut Allergy
-          </label>
-          <label class="radio-option">
-            <input type="radio" name="dietary" value="other" onchange="toggleDietaryOther()"> Other
+            <input type="radio" name="dietary" value="nonveg"> 🍗 Non-Veg
           </label>
         </div>
-        <div class="plus-one-fields" id="dietaryOtherWrap">
-          <label class="form-label" for="dietaryOther" style="margin-top: 8px;">Please specify</label>
-          <input class="form-input" type="text" id="dietaryOther" name="dietaryOther" placeholder="e.g. vegan, gluten-free, halal">
-        </div>
+      </div>
+
+      <!-- Allergies -->
+      <div class="form-row">
+        <label class="form-label" for="allergies">Allergies (optional)</label>
+        <input class="form-input" type="text" id="allergies" name="allergies" placeholder="e.g. Nut allergy, gluten-free, dairy-free">
       </div>
 
       <!-- Drink Preference -->
@@ -2061,15 +2063,6 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 })();
 
 // ---- RSVP FORM ----
-function toggleDietaryOther() {
-  const otherChecked = document.querySelector('input[name="dietary"][value="other"]')?.checked;
-  document.getElementById('dietaryOtherWrap').classList.toggle('show', otherChecked);
-}
-// Also hide when another dietary radio is picked
-document.querySelectorAll('input[name="dietary"]').forEach(r => {
-  r.addEventListener('change', toggleDietaryOther);
-});
-
 // Google Sheets integration via Google Apps Script web app
 // SETUP: 1) Create a Google Sheet  2) Extensions > Apps Script  3) Paste the script below  4) Deploy as web app  5) Put URL here
 const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyTrRFlH0_8RfSiDCg32KObaJhc_4yh3Zjv7mWZdIBlNdZlePrrHyxYX1mAJm-BEuD5/exec';
