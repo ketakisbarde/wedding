@@ -1760,6 +1760,8 @@ a:hover { color: var(--marigold); }
         </div>
       </div>
 
+      <!-- Catering questions (shown only when attending) -->
+      <div id="cateringFields">
       <!-- Number of Guests -->
       <div class="form-row">
         <label class="form-label" for="numGuests">Number of Guests (including yourself) *</label>
@@ -1800,6 +1802,7 @@ a:hover { color: var(--marigold); }
           </label>
         </div>
       </div>
+      </div><!-- /cateringFields -->
 
       <!-- Message -->
       <div class="form-row">
@@ -2068,6 +2071,10 @@ const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyTrRFlH0_8RfS
 function togglePlusOne() {
   const checked = document.querySelector('input[name="attending"]:checked');
   const coming = !!checked && checked.value === 'yes';
+
+  // Hide the catering questions entirely when the guest is not attending.
+  const catering = document.getElementById('cateringFields');
+  if (catering) catering.style.display = coming ? '' : 'none';
 
   ['numGuests', 'dietary', 'allergies', 'drinkPref'].forEach(name => {
     document.querySelectorAll('[name="' + name + '"]').forEach(el => {
