@@ -2062,6 +2062,28 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // SETUP: 1) Create a Google Sheet  2) Extensions > Apps Script  3) Paste the script below  4) Deploy as web app  5) Put URL here
 const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyTrRFlH0_8RfSiDCg32KObaJhc_4yh3Zjv7mWZdIBlNdZlePrrHyxYX1mAJm-BEuD5/exec';
 
+// Enable catering fields only when the guest is attending.
+// When "Regretfully Declines" is selected, the guest-count, diet, allergy and
+// drink fields are cleared + disabled so they are neither validated nor submitted.
+function togglePlusOne() {
+  const checked = document.querySelector('input[name="attending"]:checked');
+  const coming = !!checked && checked.value === 'yes';
+
+  ['numGuests', 'dietary', 'allergies', 'drinkPref'].forEach(name => {
+    document.querySelectorAll('[name="' + name + '"]').forEach(el => {
+      el.disabled = !coming;
+      if (!coming) {
+        if (el.type === 'radio' || el.type === 'checkbox') el.checked = false;
+        else if (el.type !== 'number') el.value = '';
+      }
+    });
+  });
+
+  // Diet is only required when attending (a disabled radio is skipped by validation).
+  const vegRadio = document.querySelector('input[name="dietary"][value="veg"]');
+  if (vegRadio) vegRadio.required = coming;
+}
+
 function handleRSVP(e) {
   e.preventDefault();
   const form = document.getElementById('rsvpForm');
