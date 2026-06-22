@@ -804,6 +804,23 @@ a:hover { color: var(--marigold); }
 .music-label.hidden { opacity: 0; }
 
 /* ============================================
+   FLOATING REGISTRY BUTTON
+   ============================================ */
+.registry-float {
+  position: fixed; bottom: 92px; right: 24px; z-index: 999;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(201,168,76,0.9); border: 2px solid var(--gold-light);
+  color: var(--dark); font-size: 1.3em; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s; backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  opacity: 0; pointer-events: none; padding: 0;
+  border: none; font-family: inherit;
+}
+.registry-float.show { opacity: 1; pointer-events: all; }
+.registry-float:hover { transform: scale(1.12); background: rgba(232,163,23,0.95); }
+
+/* ============================================
    MOBILE
    ============================================ */
 @media (max-width: 768px) {
@@ -941,6 +958,7 @@ a:hover { color: var(--marigold); }
     <p class="hero-subtitle reveal reveal-delay-2">Every mile, every city, every time zone, every chapter led us here.</p>
     <div class="hero-line reveal reveal-delay-2"></div>
     <p class="hero-venue reveal reveal-delay-3">Château Mt Eden · Saratoga, California</p>
+    <p style="font-family: var(--font-body); font-size: 0.75em; color: rgba(255,249,240,0.5); margin-top: 6px;" class="reveal reveal-delay-3">22030 Mt Eden Rd, Saratoga, CA 95070</p>
   </div>
 </section>
 
@@ -1915,6 +1933,11 @@ a:hover { color: var(--marigold); }
 </section>
 
 <!-- ============================================
+     FLOATING REGISTRY BUTTON
+     ============================================ -->
+<button class="registry-float" id="registryFloat" title="View Gifts & Registry" aria-label="Gifts and Registry">🎁</button>
+
+<!-- ============================================
      MUSIC PLAYER (floating)
      ============================================ -->
 <div class="music-player" id="musicPlayer">
@@ -1995,6 +2018,23 @@ document.getElementById('navToggle').addEventListener('click', () => {
 document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
 });
+
+// ---- FLOATING REGISTRY BUTTON ----
+(function() {
+  const registryFloat = document.getElementById('registryFloat');
+  const rsvpSection = document.getElementById('rsvp');
+  window.addEventListener('scroll', () => {
+    const rsvpRect = rsvpSection.getBoundingClientRect();
+    if (rsvpRect.top < window.innerHeight * 0.7) {
+      registryFloat.classList.add('show');
+    } else {
+      registryFloat.classList.remove('show');
+    }
+  });
+  registryFloat.addEventListener('click', () => {
+    document.getElementById('registry').scrollIntoView({ behavior: 'smooth' });
+  });
+})();
 
 // ---- COUNTDOWN ----
 (function() {
