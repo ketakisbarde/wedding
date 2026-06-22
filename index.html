@@ -2022,10 +2022,9 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 // ---- FLOATING REGISTRY BUTTON ----
 (function() {
   const registryFloat = document.getElementById('registryFloat');
-  const rsvpSection = document.getElementById('rsvp');
+  // Show registry button after scrolling past hero (similar to music player persistence)
   window.addEventListener('scroll', () => {
-    const rsvpRect = rsvpSection.getBoundingClientRect();
-    if (rsvpRect.top < window.innerHeight * 0.7) {
+    if (window.scrollY > 200) {
       registryFloat.classList.add('show');
     } else {
       registryFloat.classList.remove('show');
