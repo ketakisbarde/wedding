@@ -821,6 +821,23 @@ a:hover { color: var(--marigold); }
 .registry-float:hover { transform: scale(1.12); background: rgba(232,163,23,0.95); }
 
 /* ============================================
+   FLOATING RSVP BUTTON
+   ============================================ */
+.rsvp-float {
+  position: fixed; bottom: 156px; right: 24px; z-index: 999;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(201,168,76,0.9); border: 2px solid var(--gold-light);
+  color: var(--dark); font-size: 1.3em; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s; backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  opacity: 0; pointer-events: none; padding: 0;
+  border: none; font-family: inherit;
+}
+.rsvp-float.show { opacity: 1; pointer-events: all; }
+.rsvp-float:hover { transform: scale(1.12); background: rgba(232,163,23,0.95); }
+
+/* ============================================
    MOBILE
    ============================================ */
 @media (max-width: 768px) {
@@ -1935,6 +1952,7 @@ a:hover { color: var(--marigold); }
 <!-- ============================================
      FLOATING REGISTRY BUTTON
      ============================================ -->
+<button class="rsvp-float" id="rsvpFloat" title="Go to RSVP" aria-label="RSVP">✉️</button>
 <button class="registry-float" id="registryFloat" title="View Gifts & Registry" aria-label="Gifts and Registry">🎁</button>
 
 <!-- ============================================
@@ -2019,16 +2037,22 @@ document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
 });
 
-// ---- FLOATING REGISTRY BUTTON ----
+// ---- FLOATING BUTTONS (RSVP & REGISTRY) ----
 (function() {
+  const rsvpFloat = document.getElementById('rsvpFloat');
   const registryFloat = document.getElementById('registryFloat');
-  // Show registry button after scrolling past hero (similar to music player persistence)
+  // Show both buttons after scrolling past hero (similar to music player persistence)
   window.addEventListener('scroll', () => {
     if (window.scrollY > 200) {
+      rsvpFloat.classList.add('show');
       registryFloat.classList.add('show');
     } else {
+      rsvpFloat.classList.remove('show');
       registryFloat.classList.remove('show');
     }
+  });
+  rsvpFloat.addEventListener('click', () => {
+    document.getElementById('rsvp').scrollIntoView({ behavior: 'smooth' });
   });
   registryFloat.addEventListener('click', () => {
     document.getElementById('registry').scrollIntoView({ behavior: 'smooth' });
